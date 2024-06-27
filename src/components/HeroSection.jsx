@@ -1,5 +1,5 @@
-import React from "react";
-
+"use client";
+import { TypeAnimation } from "react-type-animation";
 function HeroSection() {
   return (
     <div>
@@ -25,6 +25,25 @@ function HeroSection() {
           transform="translate(100 100)"
         />
       </svg>
+      <TypeAnimation
+        sequence={[
+          "I am a ReactJS Developer",
+          1000,
+          "I am a NextJS Developer",
+          1000,
+          "I am a TailwindCSS Developer",
+          1000,
+          "I am a NodeJS Developer",
+          1000,
+          "I am a MongoDB Developer",
+          1000,
+        ]}
+        speed={260}
+        deletionSpeed={180}
+        preRenderFirstString={true}
+        className="text-white text-3xl absolute top-1/2 left-60 transform -translate-y-1/2 -translate-x-1/2 "
+        repeat={Infinity}
+      />
     </div>
   );
 }
