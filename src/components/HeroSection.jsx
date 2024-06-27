@@ -1,12 +1,14 @@
 "use client";
+import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
+
 function HeroSection() {
   return (
-    <div>
+    <div className="container">
       <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-[300px] h-[350px] absolute -left-20 -top-40 "
+        className="w-[300px] h-[350px] absolute -left-20 -top-40"
       >
         <path
           fill="#8093F1"
@@ -41,8 +43,50 @@ function HeroSection() {
         speed={260}
         deletionSpeed={180}
         preRenderFirstString={true}
-        className="text-white text-3xl absolute top-1/2 left-60 transform -translate-y-1/2 -translate-x-1/2 "
+        className="text-white text-3xl absolute top-1/2 left-60 transform -translate-y-1/2 -translate-x-1/2 bg-transparent"
         repeat={Infinity}
+        style={{
+          textShadow:
+            "0 0 10px 0 #8093F1, 0 0 20px 0 #8093F1, 0 0 40px 0 #8093F1, 0 0 60px 0 #8093F1",
+          WebkitBoxReflect: "below 0px linear-gradient(transparent, #0005)",
+          backgroundClip: "text",
+        }}
+      />
+      {/* <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <lottie-player
+        src="https://lottie.host/2f296f6a-2ebd-41fc-af3d-99a77ebcefea/2cTqFrWDAh.json"
+        background="##fff"
+        speed="1"
+        style={{
+          width: "300px",
+          height: "300px",
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-10%, -50%)",
+        }}
+        autoplay
+        direction="2"
+        mode="normal"
+      /> */}
+      <svg
+        viewBox="0 0 200 200"
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute right-[320px] top-[150px] h-80 w-80 "
+        style={{ perspective: "1000px" }}
+      >
+        <path
+          fill="#8093F1"
+          d="M49.2,-44.6C63.5,-34.9,74.6,-17.5,73,-1.5C71.5,14.4,57.3,28.8,43.1,45.2C28.8,61.5,14.4,79.8,-3.6,83.4C-21.6,87.1,-43.3,76,-51.8,59.6C-60.4,43.3,-55.8,21.6,-55,0.8C-54.2,-20,-57.1,-40,-48.6,-49.7C-40,-59.4,-20,-58.7,-1.3,-57.5C17.5,-56.2,34.9,-54.3,49.2,-44.6Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+      <Image
+        src={"/assets/images/Masud Pic.jpeg"}
+        alt=""
+        height={500}
+        width={500}
+        className="absolute -top-[140px] right-[300px]"
       />
     </div>
   );

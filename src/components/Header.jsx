@@ -8,7 +8,7 @@ function Header() {
         <Link href="/services"> Experiences </Link>
         <Link href="/services"> Projects </Link>
         <Link href="#about"> About </Link>
-        <Link href="/contact"> Contact </Link>
+        <Link href="/contact" > Contact </Link>
       </nav>
     </div>
   );
