@@ -12,7 +12,22 @@ import Link from "next/link";
 
 function HeroSection() {
   return (
-    <div className="container min-h-[80vh] w-full mb-5">
+    <div className="min-h-[90vh] w-full mb-5">
+      <span
+        className="bg-pulse absolute top-[120px] left-20 animate-pulsebg pulse-delay-1"
+        style={{ background: " transparent", border: "5px solid #fff" }}
+      ></span>
+      <span
+        className="bg-pulse absolute top-[200px] left-[65em] animate-pulsebg pulse-delay-3"
+        style={{ background: " transparent", border: "5px solid #fff" }}
+      ></span>
+      <span className="bg-pulse absolute top-[600px] left-[58em] animate-pulsebg pulse-delay-2"></span>
+      <span className="bg-pulse absolute top-[500px] left-[20px] animate-pulsebg pulse-delay-4"></span>
+      <span
+        className="bg-pulse absolute top-[500px] left-[40em] animate-pulsebg pulse-delay-1"
+        style={{ background: " transparent", border: "5px solid #fff" }}
+      ></span>
+      <span className="bg-pulse absolute top-[100px] left-[50em] animate-pulsebg  pulse-delay-5"></span>
       <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
@@ -108,14 +123,20 @@ function HeroSection() {
               <FaWhatsapp size={24} />
             </Link>
           </div>
-
-          <div className="flex flex-row gap-2 justify-between items-center">
-            <button className="relative text-white border rounded p-2 hover-effect overflow-hidden">
+          <div className="flex flex-row justify-center gap-x-6">
+            <button className="relative inline-block bg-blue-500/60 text-white rounded py-2 px-3 hover-effect overflow-hidden">
               Download Resume
               <span className="absolute block top-0 left-0 w-full h-[2px] bg-gradient-leftright animate-leftright"></span>
-              <span className="absolute block -top-[100%] right-0 w-[2px] h-full bg-gradient-updown animate-updown"></span>
-              <span className="absolute block"></span>
-              <span className="absolute block"></span>
+              <span className="absolute block -top-[100%] right-0 w-[2px] h-full bg-gradient-updown animate-updown animation-delay-1"></span>
+              <span className="absolute block -right-[100%] bottom-0 h-[2px] w-full bg-gradient-rightleft animate-rightleft animation-delay-2"></span>
+              <span className="absolute block left-0 -bottom[100%] w-[2px] h-full bg-gradient-downup animate-downup animation-delay-3"></span>
+            </button>
+            <button className="relative inline-block bg-blue-500/60 text-white rounded py-2 px-3 hover-effect overflow-hidden">
+              Contact Me
+              <span className="absolute block top-0 left-0 w-full h-[2px] bg-gradient-leftright animate-leftright"></span>
+              <span className="absolute block -top-[100%] right-0 w-[2px] h-full bg-gradient-updown animate-updown animation-delay-1"></span>
+              <span className="absolute block -right-[100%] bottom-0 h-[2px] w-full bg-gradient-rightleft animate-rightleft animation-delay-2"></span>
+              <span className="absolute block left-0 -bottom[100%] w-[2px] h-full bg-gradient-downup animate-downup animation-delay-3"></span>
             </button>
           </div>
         </div>

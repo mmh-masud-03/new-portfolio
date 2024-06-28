@@ -1,3 +1,5 @@
+const { transform } = require("next/dist/build/swc");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -27,20 +29,34 @@ module.exports = {
           "100%": { boxShadow: "0 0 0px #222adf" },
         },
         leftright: {
-          "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(100%)" },
+          "0%": { left: "-100%" },
+          "50%": { left: "100%" },
+          "100%": { left: "100%" },
         },
         rightleft: {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(-100%)" },
+          "0%": { right: "-100%" },
+          "50%": { right: "100%" },
+          "100%": { right: "100%" },
         },
         updown: {
-          "0%": { transform: "translateY(-100%)" },
-          "100%": { transform: "translateY(100%)" },
+          "0%": { top: "-100%" },
+          "50%": { top: "100%" },
+          "100%": { top: "100%" },
         },
         downup: {
-          "0%": { transform: "translateY(100%)" },
-          "100%": { transform: "translateY(-100%)" },
+          "0%": { bottom: "-100%" },
+          "50%": { bottom: "100%" },
+          "100%": { bottom: "100%" },
+        },
+        pulsebg: {
+          "0%": {
+            transform: "scale(0) translateY(0) rotate(0deg)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "scale(1.5) translateY(-100px) rotate(360deg)",
+            opacity: "0",
+          },
         },
         wave: {
           "0%": {
@@ -64,10 +80,22 @@ module.exports = {
         test: "test 2s linear infinite",
         circlepulse: "circlepulse 5s linear infinite",
         wave: "wave 5s ease-in-out infinite",
-        leftright: "leftright 2s ease-in-out infinite",
-        rightleft: "rightleft 2s ease-in-out infinite",
-        updown: "updown 2s ease-in-out infinite",
-        downup: "downup 2s ease-in-out infinite",
+        leftright: "leftright 1s linear infinite",
+        rightleft: "rightleft 1s linear infinite",
+        updown: "updown 1s linear infinite",
+        downup: "downup 1s linear infinite",
+        pulsebg: "pulsebg 10s linear infinite",
+      },
+      animationDelay: {
+        0: "0s",
+        1: "0.25s",
+        2: "0.5s",
+        3: "0.75s",
+        4: "1s",
+        5: "1.25s",
+        6: "1.5s",
+        7: "1.75s",
+        8: "2s",
       },
     },
   },
