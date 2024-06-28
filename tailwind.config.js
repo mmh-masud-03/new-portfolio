@@ -5,12 +5,48 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
   theme: {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      keyframes: {
+        test: {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(2)" },
+        },
+        circlepulse: {
+          "0%": { boxShadow: "0 0 10px #222adf" },
+          "20%": { boxShadow: "0 0 15px #222adf" },
+          "50%": { boxShadow: "0 0 40px #222adf" },
+          "80%": { boxShadow: "0 0 10px #222adf" },
+          "100%": { boxShadow: "0 0 0px #222adf" },
+        },
+        wave: {
+          "0%": {
+            d: "path('M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0')",
+          },
+          "25%": {
+            d: "path('M 100, 100 m -80, 0 a 80,80 0 1,1 160,10 a 80,80 0 1,1 -160,-10')",
+          },
+          "50%": {
+            d: "path('M 100, 100 m -80, 0 a 80,80 0 1,1 160,20 a 80,80 0 1,1 -160,-20')",
+          },
+          "75%": {
+            d: "path('M 100, 100 m -80, 0 a 80,80 0 1,1 160,10 a 80,80 0 1,1 -160,-10')",
+          },
+          "100%": {
+            d: "path('M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0')",
+          },
+        },
+      },
+      animation: {
+        test: "test 2s linear infinite",
+        circlepulse: "circlepulse 5s linear infinite",
+        wave: "wave 5s ease-in-out infinite",
       },
     },
   },
