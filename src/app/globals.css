@@ -43,8 +43,8 @@
   height: 100%;
 
   /* Create dots using background */
-  background-image: radial-gradient(#fff 0.1px, transparent 0.1px),
-                    radial-gradient(#000 0.1px, transparent 0.1px);
+  background-image: radial-gradient(#404646 0.05px, transparent 0.05px),
+                    radial-gradient(#677171 0.05px, transparent 0.05px);
   background-size: 10px 10px; /* Size of the dots grid */
 }
 .bg-pulse{

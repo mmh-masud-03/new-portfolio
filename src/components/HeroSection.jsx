@@ -9,10 +9,11 @@ import {
   FaWhatsapp,
 } from "react-icons/fa6";
 import Link from "next/link";
+import CountUp from "./CountUpComponent";
 
 function HeroSection() {
   return (
-    <div className="min-h-[90vh] w-full mb-5">
+    <div className="dots-container min-h-[95vh] w-full mb-5">
       <span
         className="bg-pulse absolute top-[120px] left-20 animate-pulsebg pulse-delay-1"
         style={{ background: " transparent", border: "5px solid #fff" }}
@@ -28,6 +29,13 @@ function HeroSection() {
         style={{ background: " transparent", border: "5px solid #fff" }}
       ></span>
       <span className="bg-pulse absolute top-[100px] left-[50em] animate-pulsebg  pulse-delay-5"></span>
+      <Image
+        src={"/assets/images/bulb.png"}
+        alt=""
+        width={400}
+        height={400}
+        className="absolute top-[90%] -left-[180px] bg-transparent opacity-[0.1]"
+      />
       <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +59,7 @@ function HeroSection() {
         />
       </svg>
       <div className="flex flex-row">
-        <div className="flex flex-col absolute top-40 gap-y-5 justify-between items-center w-1/2">
+        <div className="flex flex-col absolute top-20 gap-y-5 justify-between items-center w-1/2">
           <p className="text-white text-3xl ">Hello I am Masud,</p>
           <div>
             {" "}
@@ -142,7 +150,7 @@ function HeroSection() {
         </div>
 
         <div>
-          <div className="animate-circlepulse w-[300px] h-[300px] border rounded-full border-fuchsia-800/50 absolute right-52 top-36  m-1">
+          <div className="animate-circlepulse w-[300px] h-[300px] border rounded-full border-fuchsia-800/50 absolute right-52 top-28 ">
             <Image
               src={"/assets/images/hero pic.jpg"}
               alt=""
