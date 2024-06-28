@@ -13,7 +13,7 @@ import CountUp from "./CountUpComponent";
 
 function HeroSection() {
   return (
-    <div className="dots-container min-h-[95vh] w-full mb-5">
+    <div className="hero-dots-container min-h-[95vh] w-full mb-5">
       <span
         className="bg-pulse absolute top-[120px] left-20 animate-pulsebg pulse-delay-1"
         style={{ background: " transparent", border: "5px solid #fff" }}
@@ -22,7 +22,7 @@ function HeroSection() {
         className="bg-pulse absolute top-[200px] left-[65em] animate-pulsebg pulse-delay-3"
         style={{ background: " transparent", border: "5px solid #fff" }}
       ></span>
-      <span className="bg-pulse absolute top-[600px] left-[58em] animate-pulsebg pulse-delay-2"></span>
+      <span className="bg-pulse absolute top-[500px] left-[58em] animate-pulsebg pulse-delay-2"></span>
       <span className="bg-pulse absolute top-[500px] left-[20px] animate-pulsebg pulse-delay-4"></span>
       <span
         className="bg-pulse absolute top-[500px] left-[40em] animate-pulsebg pulse-delay-1"
@@ -34,7 +34,7 @@ function HeroSection() {
         alt=""
         width={400}
         height={400}
-        className="absolute top-[90%] -left-[180px] bg-transparent opacity-[0.1]"
+        className="absolute top-[120%] -left-[180px] bg-transparent opacity-[0.1] animate-bulbpulse"
       />
       <svg
         viewBox="0 0 200 200"

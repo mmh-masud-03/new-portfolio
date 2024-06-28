@@ -58,6 +58,23 @@ module.exports = {
             opacity: "0",
           },
         },
+        bulbpulse: {
+          "0%": {
+            opacity: "0.05",
+          },
+          "20%": {
+            opacity: "0.1",
+          },
+          "50%": {
+            opacity: "0.03",
+          },
+          "80%": {
+            opacity: "0.1",
+          },
+          "100%": {
+            opacity: "0",
+          },
+        },
         wave: {
           "0%": {
             d: "path('M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0')",
@@ -85,6 +102,7 @@ module.exports = {
         updown: "updown 1s linear infinite",
         downup: "downup 1s linear infinite",
         pulsebg: "pulsebg 10s linear infinite",
+        bulbpulse: "bulbpulse 10s linear infinite",
       },
       animationDelay: {
         0: "0s",
