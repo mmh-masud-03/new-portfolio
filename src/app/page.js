@@ -1,3 +1,5 @@
+import Experiences from "@/components/Experiences";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 export default function Home() {
@@ -5,6 +7,8 @@ export default function Home() {
     <div className="bg-[#050801]">
       <Header />
       <HeroSection />
+      <Experiences />
+      <Footer />
     </div>
   );
 }

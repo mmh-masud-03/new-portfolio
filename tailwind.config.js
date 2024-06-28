@@ -9,9 +9,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-leftright": "linear-gradient(90deg, transparent, #03e9f4)",
+        "gradient-updown": "linear-gradient(180deg, transparent, #03e9f4)",
+        "gradient-rightleft": "linear-gradient(270deg, transparent, #03e9f4)",
+        "gradient-downup": "linear-gradient(360deg, transparent, #03e9f4)",
       },
       keyframes: {
         test: {

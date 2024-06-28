@@ -12,7 +12,7 @@ import Link from "next/link";
 
 function HeroSection() {
   return (
-    <div className="container">
+    <div className="container min-h-[80vh] w-full mb-5">
       <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
@@ -75,46 +75,47 @@ function HeroSection() {
             databases, I deliver complete full-stack solutions. I'm passionate
             about staying updated with industry trends.
           </p>
+          <span className="w-2/3 h-[1.5px]  bg-white"></span>
           <div className="flex flex-row items-center text-white gap-x-3">
             <Link
               href={""}
-              className="border rounded-full p-1 border-[#9999f4]"
+              className="border rounded-full p-1 border-[#9999f4] hover-effect"
             >
               <FaGithub size={24} />
             </Link>
             <Link
               href={""}
-              className="border rounded-full p-1 border-[#9999f4]"
+              className="border rounded-full p-1 border-[#9999f4] hover-effect"
             >
               <FaLinkedin size={24} />
             </Link>
             <Link
               href={""}
-              className="border rounded-full p-1 border-[#9999f4]"
+              className="border rounded-full p-1 border-[#9999f4] hover-effect"
             >
               <FaMedium size={24} />
             </Link>
             <Link
               href={""}
-              className="border rounded-full p-1 border-[#9999f4]"
+              className="border rounded-full p-1 border-[#9999f4] hover-effect"
             >
               <FaTelegram size={24} />
             </Link>
             <Link
               href={""}
-              className="border rounded-full p-1 border-[#9999f4]"
+              className="border rounded-full p-1 border-[#9999f4] hover-effect"
             >
               <FaWhatsapp size={24} />
             </Link>
           </div>
 
           <div className="flex flex-row gap-2 justify-between items-center">
-            <button className="text-white border rounded p-2">
+            <button className="relative text-white border rounded p-2 hover-effect overflow-hidden">
               Download Resume
-              <span className=" w-4 bg-slate-200 p-3"></span>
-              <span></span>
-              <span></span>
-              <span></span>
+              <span className="absolute block top-0 left-0 w-full h-[2px] bg-gradient-leftright animate-leftright"></span>
+              <span className="absolute block -top-[100%] right-0 w-[2px] h-full bg-gradient-updown animate-updown"></span>
+              <span className="absolute block"></span>
+              <span className="absolute block"></span>
             </button>
           </div>
         </div>
