@@ -35,64 +35,100 @@ function HeroSection() {
           transform="translate(100 100)"
         />
       </svg>
-      <div>
-        {" "}
-        <p className="text-white text-3xl absolute left-24 top-40">
-          Hello I am Masud,
-        </p>
-        <TypeAnimation
-          sequence={[
-            "I am a ReactJS Developer",
-            1000,
-            "I am a NextJS Developer",
-            1000,
-            "I am a TailwindCSS Developer",
-            1000,
-            "I am a NodeJS Developer",
-            1000,
-            "I am a MongoDB Developer",
-            1000,
-          ]}
-          speed={260}
-          deletionSpeed={180}
-          preRenderFirstString={true}
-          className="text-white text-3xl absolute top-1/2 left-60 transform -translate-y-1/2 -translate-x-1/2 bg-transparent"
-          repeat={Infinity}
-          style={{
-            textShadow:
-              "0 0 10px 0 #8093F1, 0 0 20px 0 #8093F1, 0 0 40px 0 #8093F1, 0 0 60px 0 #8093F1",
-            WebkitBoxReflect: "below 0px linear-gradient(transparent, #0005)",
-            backgroundClip: "text",
-          }}
-        />
-        <div className="flex flex-row items-center bg-red-300">
-          <Link href={""}>
-            <FaGithub size={20} />
-          </Link>
-          <Link href={""}>
-            <FaLinkedin size={20} />
-          </Link>
-          <Link href={""}>
-            <FaMedium size={20} />
-          </Link>
-          <Link href={""}>
-            <FaTelegram size={20} />
-          </Link>
-          <Link href={""}>
-            <FaWhatsapp size={20} />
-          </Link>
-        </div>
-      </div>
+      <div className="flex flex-row">
+        <div className="flex flex-col absolute top-40 gap-y-5 justify-between items-center w-1/2">
+          <p className="text-white text-3xl ">Hello I am Masud,</p>
+          <div>
+            {" "}
+            <TypeAnimation
+              sequence={[
+                "I am a ReactJS Developer",
+                1000,
+                "I am a NextJS Developer",
+                1000,
+                "I am a TailwindCSS Developer",
+                1000,
+                "I am a NodeJS Developer",
+                1000,
+                "I am a MongoDB Developer",
+                1000,
+              ]}
+              speed={260}
+              deletionSpeed={180}
+              preRenderFirstString={true}
+              className="text-white text-3xl transform -translate-y-1/2 -translate-x-1/2 bg-transparent "
+              repeat={Infinity}
+              style={{
+                textShadow:
+                  "0 0 10px 0 #8093F1, 0 0 20px 0 #8093F1, 0 0 40px 0 #8093F1, 0 0 60px 0 #8093F1",
+                WebkitBoxReflect:
+                  "below 0px linear-gradient(transparent, #0005)",
+                backgroundClip: "text",
+              }}
+            />
+          </div>
+          <p className="text-white text-lg pl-3">
+            A full-stack developer specializing in Next.js, React.js, and modern
+            web technologies. I excel in building high-performance,
+            server-rendered React apps and dynamic UIs, with a focus on
+            performance and SEO. With experience in Node.js, Express, and
+            databases, I deliver complete full-stack solutions. I'm passionate
+            about staying updated with industry trends.
+          </p>
+          <div className="flex flex-row items-center text-white gap-x-3">
+            <Link
+              href={""}
+              className="border rounded-full p-1 border-[#9999f4]"
+            >
+              <FaGithub size={24} />
+            </Link>
+            <Link
+              href={""}
+              className="border rounded-full p-1 border-[#9999f4]"
+            >
+              <FaLinkedin size={24} />
+            </Link>
+            <Link
+              href={""}
+              className="border rounded-full p-1 border-[#9999f4]"
+            >
+              <FaMedium size={24} />
+            </Link>
+            <Link
+              href={""}
+              className="border rounded-full p-1 border-[#9999f4]"
+            >
+              <FaTelegram size={24} />
+            </Link>
+            <Link
+              href={""}
+              className="border rounded-full p-1 border-[#9999f4]"
+            >
+              <FaWhatsapp size={24} />
+            </Link>
+          </div>
 
-      <div>
-        <div className="animate-circlepulse w-[300px] h-[300px] border rounded-full border-fuchsia-800/50 absolute right-52 top-36  m-1">
-          <Image
-            src={"/assets/images/hero pic.jpg"}
-            alt=""
-            height={280}
-            width={300}
-            className="rounded-full"
-          />
+          <div className="flex flex-row gap-2 justify-between items-center">
+            <button className="text-white border rounded p-2">
+              Download Resume
+              <span className=" w-4 bg-slate-200 p-3"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <div className="animate-circlepulse w-[300px] h-[300px] border rounded-full border-fuchsia-800/50 absolute right-52 top-36  m-1">
+            <Image
+              src={"/assets/images/hero pic.jpg"}
+              alt=""
+              height={280}
+              width={300}
+              className="rounded-full"
+            />
+          </div>
         </div>
       </div>
     </div>

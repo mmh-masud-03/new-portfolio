@@ -25,6 +25,22 @@ module.exports = {
           "80%": { boxShadow: "0 0 10px #222adf" },
           "100%": { boxShadow: "0 0 0px #222adf" },
         },
+        leftright: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+        rightleft: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        updown: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100%)" },
+        },
+        downup: {
+          "0%": { transform: "translateY(100%)" },
+          "100%": { transform: "translateY(-100%)" },
+        },
         wave: {
           "0%": {
             d: "path('M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0')",
@@ -47,6 +63,10 @@ module.exports = {
         test: "test 2s linear infinite",
         circlepulse: "circlepulse 5s linear infinite",
         wave: "wave 5s ease-in-out infinite",
+        leftright: "leftright 2s ease-in-out infinite",
+        rightleft: "rightleft 2s ease-in-out infinite",
+        updown: "updown 2s ease-in-out infinite",
+        downup: "downup 2s ease-in-out infinite",
       },
     },
   },
