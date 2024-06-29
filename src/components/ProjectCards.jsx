@@ -87,7 +87,7 @@ function ProjectCards() {
     <div className="container mx-auto py-4 px-6">
       <div className="relative">
         <Swiper
-          modules={[Navigation, Scrollbar, Pagination, A11y]}
+          modules={[Navigation, Pagination, A11y]}
           spaceBetween={30}
           slidesPerView={2}
           navigation={{
@@ -95,7 +95,6 @@ function ProjectCards() {
             nextEl: nextRef.current,
           }}
           pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
           onBeforeInit={(swiper) => {
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;

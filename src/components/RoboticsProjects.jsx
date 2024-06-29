@@ -84,10 +84,10 @@ function RoboticsProjects() {
   };
 
   return (
-    <div className="container mx-auto py-12 px-6">
+    <div className="container mx-auto py-6 px-6">
       <div className="relative">
         <Swiper
-          modules={[Navigation, Scrollbar, Pagination, A11y]}
+          modules={[Navigation, Pagination, A11y]}
           spaceBetween={30}
           slidesPerView={1}
           navigation={{
@@ -95,7 +95,6 @@ function RoboticsProjects() {
             nextEl: nextRef.current,
           }}
           pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
           onBeforeInit={(swiper) => {
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;
@@ -119,7 +118,7 @@ function RoboticsProjects() {
         >
           {projectData.map((project) => (
             <SwiperSlide key={project.title}>
-              <div className="bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+              <div className="h-[70vh] bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
                 <div className="relative h-48">
                   <Image
                     src={project.image}
