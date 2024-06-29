@@ -119,30 +119,36 @@ function ProjectCards() {
         >
           {portfolioData.map((data, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center relative group">
-                <div className="relative w-full h-48">
+              <div className="bg-white rounded-lg shadow-lg px-2 flex flex-col items-center relative group">
+                <div className="flex flex-col">
+                  <div className="flex flex-row justify-between text-black">
+                    <h3 className="text-2xl font-semibold mt-4">
+                      {data.title}
+                    </h3>
+                    <h3 className=" italic font-semibold mt-4">{data.type}</h3>
+                  </div>
+
                   <Image
                     className="rounded-t-lg"
                     src={data.image}
                     alt={data.title}
-                    fill
-                    style={{ objectFit: "cover" }}
+                    height={500}
+                    width={500}
                   />
                 </div>
-                <h3 className="text-2xl font-semibold mt-4">{data.title}</h3>
-                <p className="mt-2 text-gray-600">{data.description}</p>
-                <div className="mt-4 flex flex-wrap justify-center gap-2">
-                  {data.tech.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="bg-gray-200 text-gray-800 text-sm font-medium px-2 py-1 rounded"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 rounded-lg">
-                  {data.url && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-80 rounded-lg">
+                  <p className="mt-2 text-white">{data.description}</p>
+                  <div className="mt-4 flex flex-wrap justify-center gap-2">
+                    {data.tech.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="bg-gray-200 text-gray-800 text-sm font-medium px-2 py-1 rounded"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  {data.url.length > 5 && (
                     <a
                       href={data.url}
                       target="_blank"

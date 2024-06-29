@@ -108,7 +108,7 @@ export const ContactUs = () => {
           {status && (
             <p
               className={`mt-4 ${
-                status.includes("Success") ? "text-green-600" : "text-red-600"
+                status.includes("Success") ? "text-green-800" : "text-red-600"
               }`}
             >
               {status}

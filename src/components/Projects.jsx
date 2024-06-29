@@ -4,7 +4,7 @@ import RoboticsProjects from "./RoboticsProjects";
 
 function Projects() {
   return (
-    <div className=" flex flex-col min-h-[80vh] text-white project-dots-container z-50 mb-20">
+    <div className="relative flex flex-col min-h-[80vh] text-white project-dots-container z-50 mb-20">
       <p className="text-white font-bold text-3xl text-center w-full bg-slate-600/20 py-3">
         Projects
       </p>
@@ -12,7 +12,7 @@ function Projects() {
         <div className="w-1/5 h-full my-auto text-2xl font-semibold px-3">
           Software projects
         </div>
-        <div className="w-[80%] bg-slate-100/50 ">
+        <div className="w-[80%] bg-slate-100/10 ">
           {" "}
           <ProjectCards />
         </div>
