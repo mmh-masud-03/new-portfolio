@@ -1,4 +1,5 @@
 import React from "react";
+import ProjectCards from "./ProjectCards";
 
 function Projects() {
   return (
@@ -7,8 +8,11 @@ function Projects() {
         Projects
       </p>
       <div className="flex flex-row justify-between text-white mt-3">
-        <div className="w-1/6">Software projects</div>
-        <div className="w-full bg-slate-100/50 h-[80vh]">Project cards</div>
+        <div className="w-1/5">Software projects</div>
+        <div className="w-[80%] bg-slate-100/50 ">
+          {" "}
+          <ProjectCards />
+        </div>
       </div>
     </div>
   );
