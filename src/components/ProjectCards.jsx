@@ -18,7 +18,7 @@ const portfolioData = [
     image: "/assets/images/ecommerce.png",
     url: "https://gadget-hub-store.vercel.app/",
     github: "https://github.com/mmh-masud-03/ecommerce",
-    tech: ["NextJS", "Redux Toolkit", "MongoDB", "Tailwind CSS"],
+    tech: ["NextJS", "Redux Toolkit", "Mongoose", "MongoDB", "Tailwind CSS"],
   },
   {
     title: "ConvoSphere",
@@ -50,16 +50,16 @@ const portfolioData = [
     github: "https://github.com/mmh-masud-03/todo-next",
     tech: ["React", "Next.js", "Tailwind CSS"],
   },
-  {
-    title: "Blog Site",
-    type: "Blog",
-    description:
-      "A personal blog site built with React.js. You can navigate between the routes easily. The components are reusable. The blog posts are written in jsx and rendered dynamically.",
-    image: "/assets/images/blog-react.png",
-    url: "#",
-    github: "https://github.com/mmh-masud-03/Blog_React",
-    tech: ["React.js", "Markdown", "CSS"],
-  },
+  // {
+  //   title: "Blog Site",
+  //   type: "Blog",
+  //   description:
+  //     "A personal blog site built with React.js. You can navigate between the routes easily. The components are reusable. The blog posts are written in jsx and rendered dynamically.",
+  //   image: "/assets/images/blog-react.png",
+  //   url: "#",
+  //   github: "https://github.com/mmh-masud-03/Blog_React",
+  //   tech: ["React.js", "Markdown", "CSS"],
+  // },
   {
     title: "Resort Site",
     type: "Frontend",
@@ -84,7 +84,7 @@ function ProjectCards() {
   };
 
   return (
-    <div className="container mx-auto py-10 px-6">
+    <div className="container mx-auto py-4 px-6">
       <div className="relative">
         <Swiper
           modules={[Navigation, Scrollbar, Pagination, A11y]}
@@ -119,9 +119,9 @@ function ProjectCards() {
         >
           {portfolioData.map((data, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-lg shadow-lg px-2 flex flex-col items-center relative group">
+              <div className="bg-white rounded-lg shadow-lg px-2 flex flex-col items-center relative group border-2 border-blue-400">
                 <div className="flex flex-col">
-                  <div className="flex flex-row justify-between text-black">
+                  <div className="flex flex-row justify-between text-black mb-2 border-b-2">
                     <h3 className="text-2xl font-semibold mt-4">
                       {data.title}
                     </h3>
@@ -132,40 +132,40 @@ function ProjectCards() {
                     className="rounded-t-lg"
                     src={data.image}
                     alt={data.title}
-                    height={500}
-                    width={500}
+                    height={450}
+                    width={450}
                   />
                 </div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-80 rounded-lg">
-                  <p className="mt-2 text-white">{data.description}</p>
+                  <p className="mt-2 text-white px-4">{data.description}</p>
                   <div className="mt-4 flex flex-wrap justify-center gap-2">
+                    <span className="text-white border-b-2">Technologies:</span>
                     {data.tech.map((tech, i) => (
-                      <span
-                        key={i}
-                        className="bg-gray-200 text-gray-800 text-sm font-medium px-2 py-1 rounded"
-                      >
-                        {tech}
-                      </span>
+                      <div key={i} className="text-white">
+                        {tech},
+                      </div>
                     ))}
                   </div>
-                  {data.url.length > 5 && (
+                  <div className="flex flex-row gap-3 mt-3">
+                    {data.url.length > 5 && (
+                      <a
+                        href={data.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 transition flex items-center gap-2"
+                      >
+                        <FaExternalLinkAlt size={35} />
+                      </a>
+                    )}
                     <a
-                      href={data.url}
+                      href={data.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 transition flex items-center gap-2"
+                      className="bg-black text-white px-4 py-2 rounded shadow hover:bg-gray-900 transition flex items-center gap-2"
                     >
-                      <FaExternalLinkAlt size={40} />
+                      <FaGithub size={35} />
                     </a>
-                  )}
-                  <a
-                    href={data.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gray-800 text-white px-4 py-2 rounded shadow hover:bg-gray-900 transition flex items-center gap-2"
-                  >
-                    <FaGithub size={40} />
-                  </a>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>

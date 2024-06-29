@@ -12,7 +12,7 @@ function Projects() {
         <div className="w-1/5 h-full my-auto text-2xl font-semibold px-3">
           Software projects
         </div>
-        <div className="w-[80%] bg-slate-100/10 ">
+        <div className="w-[80%] bg-slate-100/10">
           {" "}
           <ProjectCards />
         </div>
