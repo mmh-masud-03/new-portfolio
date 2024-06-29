@@ -9,7 +9,8 @@ import "swiper/css/scrollbar";
 
 const portfolioData = [
   {
-    title: "Ecommerce Platform",
+    title: "Gadget Hub",
+    type: "Ecommerce",
     description:
       "A full-stack e-commerce application where you can create and login to your account then select one or more products to add to the cart or wishlist and place order. You can serach and filter products. Check live demo for more.",
     image: "/assets/images/ecommerce.png",
@@ -18,7 +19,9 @@ const portfolioData = [
     tech: ["NextJS", "Redux Toolkit", "MongoDB", "Tailwind CSS"],
   },
   {
-    title: "Chat Application",
+    title: "ConvoSphere",
+    type: "Realtime Chat",
+
     description:
       "A realtime chat application where you can create and login to your account then select one or more contacts to start a chat. You will always see the last message first and send any image or text. Check live demo for more.",
     image: "/assets/images/convosphere.png",
@@ -28,6 +31,8 @@ const portfolioData = [
   },
   {
     title: "JSON Timeline",
+    type: "JSON Placholder API",
+
     description:
       "This is the timeline of posts from jsonplaceholder API. You can see the posts, comments, and users. The posts are sorted in descending order and the comments are sorted by post id.",
     image: "/assets/images/json-timeline.png",
@@ -36,7 +41,9 @@ const portfolioData = [
     tech: ["Next.js", "Tailwind", "JSONPlaceholder"],
   },
   {
-    title: "Todo App",
+    title: "MERN Todo App",
+    type: "CRUD",
+
     description:
       "A simple todo app built with React, Express and MongoDB following MVC pattern where you can add, delete, and mark as complete or incomplete your tasks then filter them by all, active, and completed.",
     image: "/assets/images/todo-full.png",
@@ -46,6 +53,8 @@ const portfolioData = [
   },
   {
     title: "Blog Site",
+    type: "Blog",
+
     description:
       "A personal blog site built with React.js. You can navigate between the routes easily. The components are reusable. The blog posts are written in jsx and rendered dynamically.",
     image: "/assets/images/blog-react.png",
@@ -55,6 +64,8 @@ const portfolioData = [
   },
   {
     title: "Resort Site",
+    type: "Frontend",
+
     description:
       "I made the clone of a resort site using HTML, CSS, and JavaScript.",
     image: "/assets/images/sarah-body.png",
@@ -70,7 +81,7 @@ function ProjectCards() {
       <Swiper
         modules={[Navigation, Scrollbar, Pagination, A11y]}
         spaceBetween={30}
-        slidesPerView={1}
+        slidesPerView={2}
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
