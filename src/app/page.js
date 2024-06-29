@@ -1,3 +1,4 @@
+import { ContactUs } from "@/components/ContactForm";
 import Experiences from "@/components/Experiences";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <Experiences />
       <Projects />
+      <ContactUs />
       <Footer />
     </div>
   );
