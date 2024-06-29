@@ -13,28 +13,28 @@ const projectData = [
     title: "RFID Attendance System",
     description:
       "Implemented an RFID-based attendance system for efficient tracking of student attendance.",
-    image: "/images/robotics/RFID.jpg",
+    image: "/assets/images/robotics/RFID.jpg",
     tech: ["RFID", "16X2 LCD", "ESP-8266", "Google Sheets"],
   },
   {
     title: "Voice Controlled Home Automation",
     description:
       "Developed a home automation system controlled via voice commands using Arduino and speech recognition via Bluetooth.",
-    image: "/images/robotics/Home automation.jpg",
+    image: "/assets/images/robotics/Home automation.jpg",
     tech: ["4 Channel Relay", "Bluetooth HC-05", "Arduino"],
   },
   {
     title: "Welcome Bot",
     description:
       "Designed and programmed a welcoming robot to greet visitors at campus events.",
-    image: "/images/robotics/Hello bot 2.jpg",
+    image: "/assets/images/robotics/Hello bot 2.jpg",
     tech: ["Servo", "Sonar Sensor", "Arduino Uno"],
   },
   {
     title: "Smoke-Free Campus",
     description:
       "Initiated and led a project to promote a smoke-free environment on campus and raise awareness about the harmful effects of active and passive smoking.",
-    image: "/images/robotics/Hello bot.jpg",
+    image: "/assets/images/robotics/Hello bot.jpg",
     tech: ["Gas Sensor", "Servo", "Arduino Uno"],
   },
   {
@@ -48,21 +48,21 @@ const projectData = [
     title: "Arduino Wireless Distance Meter",
     description:
       "Developed a wireless distance measurement device using Arduino for industrial applications.",
-    image: "/images/robotics/Wireless Distance meter.png",
+    image: "/assets/images/robotics/Wireless Distance meter.png",
     tech: ["Sonar Sensor", "16X2 LCD", "Arduino Uno"],
   },
   {
     title: "Line Follower Robot",
     description:
       "Developed an IR sensor based line follower robot which can follow a black line on a white surface or vice versa.",
-    image: "/images/robotics/LFR.jpg",
+    image: "/assets/images/robotics/LFR.jpg",
     tech: ["IR Sensor", "LiPo Battery", "Arduino Nano"],
   },
   {
     title: "Soccer Robot",
     description:
       "I participated in many soccer robot competitions. I upgraded the robot and made it more efficient by doing R&D on it.",
-    image: "/images/robotics/Soccer Robot.jpg",
+    image: "/assets/images/robotics/Soccer Robot.jpg",
     tech: [
       "Bluetooth HC-05",
       "LiPo Battery",
@@ -84,7 +84,7 @@ function RoboticsProjects() {
   };
 
   return (
-    <div className="container mx-auto py-12">
+    <div className="container mx-auto py-12 px-6">
       <div className="relative">
         <Swiper
           modules={[Navigation, Scrollbar, Pagination, A11y]}
@@ -112,7 +112,7 @@ function RoboticsProjects() {
               spaceBetween: 40,
             },
             1024: {
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 50,
             },
           }}
@@ -150,7 +150,7 @@ function RoboticsProjects() {
           ))}
         </Swiper>
 
-        <div className="flex justify-between mt-8">
+        <div className="flex justify-center mt-8 gap-x-14">
           <button
             ref={prevRef}
             className={`bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 transition ${
