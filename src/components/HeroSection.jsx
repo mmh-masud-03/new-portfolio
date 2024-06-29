@@ -34,7 +34,7 @@ function HeroSection() {
         alt=""
         width={400}
         height={400}
-        className="absolute top-[120%] -left-[180px] bg-transparent opacity-[0.1] animate-bulbpulse"
+        className="absolute top-[146%] -left-[160px] bg-transparent opacity-[0.1] animate-bulbpulse"
       />
       <svg
         viewBox="0 0 200 200"
