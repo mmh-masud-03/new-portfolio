@@ -23,10 +23,10 @@ function Projects() {
       <ScrollIndicator />
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-10"></div>
-        <div className="absolute inset-0 bg-[url('./random bg.png')] opacity-5"></div>
+        <div className="absolute inset-0 bg-[url('random bg.png')] opacity-5"></div>
       </div>
 
-      <p className="text-white font-bold text-3xl text-center w-full  py-3 z-10">
+      <p className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-16 pt-24 text-center">
         Projects
       </p>
 

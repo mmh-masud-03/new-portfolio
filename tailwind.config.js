@@ -75,6 +75,17 @@ module.exports = {
             opacity: "0",
           },
         },
+        blob: {
+          "0%": {
+            transform: "scale(1) translateY(0)",
+          },
+          "50%": {
+            clipPath: "scale(1.2) translateY(-10px)",
+          },
+          "100%": {
+            clipPath: "scale(1) translateY(0)",
+          },
+        },
         wave: {
           "0%": {
             d: "path('M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0')",
@@ -103,6 +114,7 @@ module.exports = {
         downup: "downup 1s linear infinite",
         pulsebg: "pulsebg 10s linear infinite",
         bulbpulse: "bulbpulse 10s linear infinite",
+        blob: "blob 5s ease-in-out infinite",
       },
       animationDelay: {
         0: "0s",

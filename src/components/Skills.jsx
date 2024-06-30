@@ -95,9 +95,11 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="relative min-h-[60vh] px-4 py-12 bg-gray-900 text-white mt-20"
+      className="relative min-h-[60vh] px-4 py-12 bg-gray-900 text-white pt-24"
     >
-      <h2 className="text-3xl font-bold text-center mb-12">Skills</h2>
+      <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-16 text-center">
+        Skills
+      </h2>
       <div className="flex flex-wrap justify-center gap-8">
         {skillsData.map((category) => (
           <div
