@@ -53,7 +53,10 @@ export const ContactUs = () => {
   }, [status]);
 
   return (
-    <div className="flex bg-gradient-to-br from-purple-600 to-blue-500 min-h-screen w-full items-center justify-center">
+    <div
+      id="contact"
+      className="flex bg-gradient-to-br from-purple-600 to-blue-500 min-h-screen w-full items-center justify-center"
+    >
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -61,7 +64,7 @@ export const ContactUs = () => {
         className="max-w-lg w-full mx-auto p-8 bg-white rounded-xl shadow-2xl"
       >
         <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
-          Contact Us
+          Send Your Message
         </h2>
         <form ref={form} onSubmit={sendEmail} className="space-y-6">
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>

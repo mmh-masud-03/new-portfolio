@@ -1,12 +1,12 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import { motion } from "framer-motion";
 
 const projectData = [
   {
@@ -71,7 +71,6 @@ const projectData = [
     ],
   },
 ];
-
 function RoboticsProjects() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -118,7 +117,10 @@ function RoboticsProjects() {
         >
           {projectData.map((project) => (
             <SwiperSlide key={project.title}>
-              <div className="h-[70vh] bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="h-[70vh] bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 project-card"
+              >
                 <div className="relative h-48">
                   <Image
                     src={project.image}
@@ -144,12 +146,12 @@ function RoboticsProjects() {
                     ))}
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        <div className="flex justify-center mt-8 gap-x-14">
+        <div className="flex justify-around px-6 mt-8">
           <button
             ref={prevRef}
             className={`bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 transition ${

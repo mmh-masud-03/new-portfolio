@@ -28,7 +28,10 @@ function Experiences() {
   const [selectedExperience, setSelectedExperience] = useState(experiences[0]);
 
   return (
-    <div className=" z-10 flex flex-col container mx-auto py-12 justify-between items-center bg-gray-800 min-h-[60vh] mb-5">
+    <div
+      id="experiences"
+      className=" z-10 flex flex-col container mx-auto py-12 justify-between items-center min-h-[60vh] mb-5"
+    >
       <h2 className="text-4xl font-bold text-white mb-8">Working Experience</h2>
       <div className="flex w-full">
         <div className="w-1/4 border-r-2 border-gray-200 px-4">

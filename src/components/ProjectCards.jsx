@@ -1,13 +1,14 @@
 "use client";
 import React, { useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Navigation, Pagination, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const portfolioData = [
   {
@@ -118,13 +119,16 @@ function ProjectCards() {
         >
           {portfolioData.map((data, index) => (
             <SwiperSlide key={index}>
-              <div className="h-[60vh] bg-white rounded-lg shadow-lg p-2 flex flex-col items-center relative group border-2 border-blue-400">
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="h-[60vh] bg-white rounded-lg shadow-lg p-2 flex flex-col items-center relative group border-2 border-blue-400 project-card"
+              >
                 <div className="flex flex-col">
                   <div className="flex flex-row justify-between text-black mb-2 border-b-2">
                     <h3 className="text-2xl font-semibold mt-4">
                       {data.title}
                     </h3>
-                    <h3 className=" italic font-semibold mt-4">{data.type}</h3>
+                    <h3 className="italic font-semibold mt-4">{data.type}</h3>
                   </div>
 
                   <Image
@@ -135,7 +139,7 @@ function ProjectCards() {
                     width={450}
                   />
                 </div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-[0.85] rounded-lg">
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-[0.85] rounded-lg ">
                   <p className="mt-2 text-white px-4">{data.description}</p>
                   <div className="mt-4 flex flex-wrap justify-center gap-2">
                     <span className="text-white border-b-2">Technologies:</span>
@@ -147,30 +151,32 @@ function ProjectCards() {
                   </div>
                   <div className="flex flex-row gap-3 mt-3">
                     {data.url.length > 5 && (
-                      <a
+                      <Link
                         href={data.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 transition flex items-center gap-2"
                       >
-                        <FaExternalLinkAlt size={32} />
-                      </a>
+                        <span className="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 transition flex items-center gap-2">
+                          <FaExternalLinkAlt size={32} />
+                        </span>
+                      </Link>
                     )}
-                    <a
+                    <Link
                       href={data.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-black text-white px-4 py-2 rounded shadow hover:bg-gray-900 transition flex items-center gap-2"
                     >
-                      <FaGithub size={32} />
-                    </a>
+                      <span className="bg-black text-white px-4 py-2 rounded shadow hover:bg-gray-900 transition flex items-center gap-2">
+                        <FaGithub size={32} />
+                      </span>
+                    </Link>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="flex justify-center gap-x-14 mt-8">
+        <div className="flex justify-around px-6 mt-8">
           <button
             ref={prevRef}
             className={`bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 transition ${

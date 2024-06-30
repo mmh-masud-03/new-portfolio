@@ -8,13 +8,11 @@ import Skills from "@/components/Skills";
 export default function Home() {
   return (
     <div className="bg-[#050801]">
-      <Header />
       <HeroSection />
+      <Skills />
       <Experiences />
       <Projects />
-      <Skills />
       <ContactUs />
-      <Footer />
     </div>
   );
 }

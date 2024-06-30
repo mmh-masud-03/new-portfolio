@@ -10,10 +10,11 @@ import {
 } from "react-icons/fa6";
 import Link from "next/link";
 import CountUp from "./CountUpComponent";
+import MouseAnimation from "./MouseAnimation";
 
 function HeroSection() {
   return (
-    <div className="hero-dots-container min-h-[95vh] w-full mb-5">
+    <div id="about" className="hero-dots-container min-h-[95vh] w-full mb-5">
       <span
         className="bg-pulse absolute top-[120px] left-20 animate-pulsebg pulse-delay-1"
         style={{ background: " transparent", border: "5px solid #fff" }}
@@ -29,13 +30,7 @@ function HeroSection() {
         style={{ background: " transparent", border: "5px solid #fff" }}
       ></span>
       <span className="bg-pulse absolute top-[100px] left-[50em] animate-pulsebg  pulse-delay-5"></span>
-      <Image
-        src={"/assets/images/bulb.png"}
-        alt=""
-        width={400}
-        height={400}
-        className="absolute top-[146%] -left-[160px] bg-transparent opacity-[0.1] animate-bulbpulse"
-      />
+
       <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"

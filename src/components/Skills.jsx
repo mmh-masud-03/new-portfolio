@@ -93,7 +93,10 @@ function Skills() {
   ];
 
   return (
-    <div className="min-h-[60vh] px-4 py-12 bg-gray-900 text-white">
+    <div
+      id="skills"
+      className="relative min-h-[60vh] px-4 py-12 bg-gray-900 text-white mt-20"
+    >
       <h2 className="text-3xl font-bold text-center mb-12">Skills</h2>
       <div className="flex flex-wrap justify-center gap-8">
         {skillsData.map((category) => (
@@ -134,6 +137,25 @@ function Skills() {
           </div>
         ))}
       </div>
+      <Image
+        src={"/assets/images/bulb.png"}
+        alt=""
+        width={400}
+        height={400}
+        className="absolute top-[50%] -left-[160px] bg-transparent opacity-[0.1] animate-bulbpulse"
+      />
+      <svg
+        width="100"
+        height="100"
+        className="absolute top-0 right-0 animate-bounce opacity-10 h-56 w-56"
+      >
+        <polygon
+          points="50,15 61,35 85,35 66,50 71,75 50,60 29,75 34,50 15,35 39,35"
+          stroke="black"
+          stroke-width="3"
+          fill="white"
+        />
+      </svg>
     </div>
   );
 }
