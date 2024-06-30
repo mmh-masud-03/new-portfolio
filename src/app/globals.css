@@ -82,3 +82,34 @@ animation-duration: 15s;}
                     radial-gradient(#1d1f1f 0.5px, transparent 0.5px);
   background-size: 20px 20px;
 }
+
+.skill-container .skill-fill {
+  transform: translateY(100%);
+  transition: transform 0.5s ease-out;
+}
+
+.skill-container:hover .skill-fill {
+  transform: translateY(0) !important;
+}
+
+.bubble-animation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 50% 100%, transparent 10px, rgba(255,255,255,0.3) 10px, rgba(255,255,255,0.3) 12px, transparent 12px) 0 0/20px 20px,
+    radial-gradient(circle at 50% 100%, transparent 8px, rgba(255,255,255,0.3) 8px, rgba(255,255,255,0.3) 10px, transparent 10px) 10px 10px/20px 20px;
+  background-repeat: repeat-x;
+  animation: bubbleRise 2s linear infinite;
+}
+
+@keyframes bubbleRise {
+  0% {
+    background-position-y: 100%, 100%;
+  }
+  100% {
+    background-position-y: -20px, -20px;
+  }
+}
