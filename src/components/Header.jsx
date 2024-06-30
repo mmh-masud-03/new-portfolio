@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 function Header() {
   return (
@@ -8,7 +9,12 @@ function Header() {
       <div className="flex flex-row justify-between items-center max-w-7xl mx-auto">
         <div className="text-white text-3xl font-bold">
           <Link href="/">
-            <span className="hover:text-gray-400">MyPortfolio</span>
+            <Image
+              src={"/assets/images/tools/coder.png"}
+              alt=""
+              width={40}
+              height={40}
+            />
           </Link>
         </div>
         <nav className="flex flex-row gap-x-6 items-center text-xl text-white">
