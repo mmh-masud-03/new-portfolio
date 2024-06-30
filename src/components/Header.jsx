@@ -50,7 +50,7 @@ function Header() {
               key={item.id}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="text-lg text-white hover:text-gray-300 transition-colors duration-200 cursor-pointer relative group"
+              className="text-lg text-yellow-300 hover:text-gray-300 transition-colors duration-200 cursor-pointer relative group"
               onClick={() =>
                 document
                   .getElementById(item.id)

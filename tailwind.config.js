@@ -11,10 +11,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-leftright": "linear-gradient(90deg, transparent, #03e9f4)",
-        "gradient-updown": "linear-gradient(180deg, transparent, #03e9f4)",
-        "gradient-rightleft": "linear-gradient(270deg, transparent, #03e9f4)",
-        "gradient-downup": "linear-gradient(360deg, transparent, #03e9f4)",
+        "gradient-leftright": "linear-gradient(90deg, transparent, #006400)",
+        "gradient-updown": "linear-gradient(180deg, transparent, #006400)",
+        "gradient-rightleft": "linear-gradient(270deg, transparent, #006400)",
+        "gradient-downup": "linear-gradient(360deg, transparent, #006400)",
       },
       keyframes: {
         test: {

@@ -130,14 +130,14 @@ function HeroSection() {
             </Link>
           </div>
           <div className="flex flex-row justify-center gap-x-6">
-            <button className="relative inline-block bg-blue-500/60 text-white rounded py-2 px-3 hover-effect overflow-hidden">
+            <button className="relative inline-block bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300  overflow-hidden">
               Download Resume
               <span className="absolute block top-0 left-0 w-full h-[2px] bg-gradient-leftright animate-leftright"></span>
               <span className="absolute block -top-[100%] right-0 w-[2px] h-full bg-gradient-updown animate-updown animation-delay-1"></span>
               <span className="absolute block -right-[100%] bottom-0 h-[2px] w-full bg-gradient-rightleft animate-rightleft animation-delay-2"></span>
               <span className="absolute block left-0 -bottom[100%] w-[2px] h-full bg-gradient-downup animate-downup animation-delay-3"></span>
             </button>
-            <button className="relative inline-block bg-blue-500/60 text-white rounded py-2 px-3 hover-effect overflow-hidden">
+            <button className="relative inline-block bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 overflow-hidden">
               Contact Me
               <span className="absolute block top-0 left-0 w-full h-[2px] bg-gradient-leftright animate-leftright"></span>
               <span className="absolute block -top-[100%] right-0 w-[2px] h-full bg-gradient-updown animate-updown animation-delay-1"></span>
