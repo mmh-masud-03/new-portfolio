@@ -55,6 +55,7 @@ function Skills() {
           level: 95,
         },
         { name: "FastAPI", src: "/assets/images/tools/fastapi.svg", level: 65 },
+        { name: "MongoDB", src: "/assets/images/tools/mongodb.svg", level: 75 },
       ],
     },
     {
