@@ -53,7 +53,7 @@ export const ContactUs = () => {
   }, [status]);
 
   return (
-    <div
+    <section
       id="contact"
       className="flex bg-gradient-to-br from-purple-600 to-blue-500 min-h-screen w-full items-center justify-center"
     >
@@ -143,6 +143,6 @@ export const ContactUs = () => {
           </motion.p>
         )}
       </motion.div>
-    </div>
+    </section>
   );
 };

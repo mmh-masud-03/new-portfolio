@@ -93,7 +93,7 @@ function Skills() {
   ];
 
   return (
-    <div
+    <section
       id="skills"
       className="relative min-h-[60vh] px-4 py-12 bg-gray-900 text-white mt-20"
     >
@@ -111,7 +111,7 @@ function Skills() {
               {category.skills.map((skill) => (
                 <div
                   key={skill.name}
-                  className="skill-container flex flex-col items-center relative group w-20 h-24 overflow-hidden rounded-lg"
+                  className="skill-container flex flex-col items-center relative group w-20 h-24 overflow-hidden rounded-lg cursor-pointer"
                 >
                   <Image
                     src={skill.src}
@@ -147,7 +147,7 @@ function Skills() {
       <svg
         width="100"
         height="100"
-        className="absolute top-0 right-0 animate-bounce opacity-10 h-56 w-56"
+        className="absolute -bottom-40 -right-32 animate-bounce opacity-5 h-56 w-56"
       >
         <polygon
           points="50,15 61,35 85,35 66,50 71,75 50,60 29,75 34,50 15,35 39,35"
@@ -156,7 +156,7 @@ function Skills() {
           fill="white"
         />
       </svg>
-    </div>
+    </section>
   );
 }
 

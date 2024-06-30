@@ -16,7 +16,7 @@ function ScrollIndicator() {
 
 function Projects() {
   return (
-    <div
+    <section
       id="projects"
       className="relative flex flex-col min-h-[80vh] text-white project-section-bg z-40 mb-20 pb-10"
     >
@@ -57,7 +57,7 @@ function Projects() {
           <RoboticsProjects />
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 }
 

@@ -14,7 +14,7 @@ import MouseAnimation from "./MouseAnimation";
 
 function HeroSection() {
   return (
-    <div id="about" className="hero-dots-container min-h-[95vh] w-full mb-5">
+    <section id="about" className="hero-dots-container min-h-[95vh] w-full mb-5">
       <span
         className="bg-pulse absolute top-[120px] left-20 animate-pulsebg pulse-delay-1"
         style={{ background: " transparent", border: "5px solid #fff" }}
@@ -156,7 +156,7 @@ function HeroSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
