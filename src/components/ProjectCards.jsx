@@ -28,7 +28,7 @@ const portfolioData = [
     image: "/assets/images/convosphere.png",
     url: "https://next-chat-convosphere.vercel.app/",
     github: "https://github.com/mmh-masud-03/next-chat",
-    tech: ["PusherJS", "Next-Auth", "Cloudinary"],
+    tech: ["Next JS", "Tailwind", "PusherJS", "Next-Auth", "Cloudinary"],
   },
   {
     title: "JSON Timeline",
@@ -68,7 +68,7 @@ const portfolioData = [
     image: "/assets/images/sarah-body.png",
     url: "#",
     github: "https://github.com/mmh-masud-03/Sarah-Resort",
-    tech: ["Next.js", "Stripe", "Tailwind CSS"],
+    tech: ["HTML", "CSS", "JavaScript"],
   },
 ];
 
@@ -118,7 +118,7 @@ function ProjectCards() {
         >
           {portfolioData.map((data, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white rounded-lg shadow-lg px-2 flex flex-col items-center relative group border-2 border-blue-400">
+              <div className="h-[60vh] bg-white rounded-lg shadow-lg px-2 flex flex-col items-center relative group border-2 border-blue-400">
                 <div className="flex flex-col">
                   <div className="flex flex-row justify-between text-black mb-2 border-b-2">
                     <h3 className="text-2xl font-semibold mt-4">
@@ -135,7 +135,7 @@ function ProjectCards() {
                     width={450}
                   />
                 </div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-80 rounded-lg">
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-[0.85] rounded-lg">
                   <p className="mt-2 text-white px-4">{data.description}</p>
                   <div className="mt-4 flex flex-wrap justify-center gap-2">
                     <span className="text-white border-b-2">Technologies:</span>
@@ -153,7 +153,7 @@ function ProjectCards() {
                         rel="noopener noreferrer"
                         className="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 transition flex items-center gap-2"
                       >
-                        <FaExternalLinkAlt size={35} />
+                        <FaExternalLinkAlt size={32} />
                       </a>
                     )}
                     <a
@@ -162,7 +162,7 @@ function ProjectCards() {
                       rel="noopener noreferrer"
                       className="bg-black text-white px-4 py-2 rounded shadow hover:bg-gray-900 transition flex items-center gap-2"
                     >
-                      <FaGithub size={35} />
+                      <FaGithub size={32} />
                     </a>
                   </div>
                 </div>
