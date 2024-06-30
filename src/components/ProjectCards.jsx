@@ -118,7 +118,7 @@ function ProjectCards() {
         >
           {portfolioData.map((data, index) => (
             <SwiperSlide key={index}>
-              <div className="h-[60vh] bg-white rounded-lg shadow-lg px-2 flex flex-col items-center relative group border-2 border-blue-400">
+              <div className="h-[60vh] bg-white rounded-lg shadow-lg p-2 flex flex-col items-center relative group border-2 border-blue-400">
                 <div className="flex flex-col">
                   <div className="flex flex-row justify-between text-black mb-2 border-b-2">
                     <h3 className="text-2xl font-semibold mt-4">
