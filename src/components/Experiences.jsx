@@ -102,7 +102,7 @@ function Experiences() {
           variants={itemVariants}
           className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-16 text-center"
         >
-          Professional Journey
+          Working Experiences
         </motion.h2>
         <div className="flex flex-col lg:flex-row gap-12">
           <motion.div variants={itemVariants} className="lg:w-1/3 space-y-6">

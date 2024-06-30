@@ -179,7 +179,7 @@ function ProjectCards() {
         <div className="flex justify-around px-6 mt-8">
           <button
             ref={prevRef}
-            className={`bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 transition ${
+            className={`bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
               isBeginning ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={isBeginning}
@@ -188,7 +188,7 @@ function ProjectCards() {
           </button>
           <button
             ref={nextRef}
-            className={`bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 transition ${
+            className={`bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
               isEnd ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={isEnd}

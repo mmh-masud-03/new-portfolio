@@ -70,9 +70,9 @@ function Skills() {
     {
       category: "Others",
       skills: [
-        { name: "Figma", src: "/assets/images/tools/figma.svg", level: 75 },
+        { name: "Figma", src: "/assets/images/tools/figma.svg", level: 80 },
         { name: "Canva", src: "/assets/images/tools/canva.svg", level: 70 },
-        { name: "ESP", src: "/assets/images/tools/esp.svg", level: 95 },
+        { name: "ESP", src: "/assets/images/tools/esp.svg", level: 99 },
         {
           name: "TinkerCAD",
           src: "/assets/images/tools/tinkercad.svg",
@@ -106,7 +106,7 @@ function Skills() {
             key={category.category}
             className="bg-gray-800 rounded-lg p-6 w-[30%] min-w-[280px]"
           >
-            <h3 className="text-xl font-semibold mb-4 border-b text-center pb-1">
+            <h3 className="text-xl font-semibold mb-4 border-b text-center pb-3">
               {category.category}
             </h3>
             <div className="flex flex-wrap justify-center gap-6 mt-1">

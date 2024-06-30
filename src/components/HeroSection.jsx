@@ -7,7 +7,7 @@ import {
   FaMedium,
   FaTelegram,
   FaWhatsapp,
-} from "react-icons/fa6";
+} from "react-icons/fa";
 import Link from "next/link";
 import CountUp from "./CountUpComponent";
 import MouseAnimation from "./MouseAnimation";
@@ -20,19 +20,19 @@ function HeroSection() {
     >
       <span
         className="bg-pulse absolute top-[120px] left-20 animate-pulsebg pulse-delay-1"
-        style={{ background: " transparent", border: "5px solid #fff" }}
+        style={{ background: "transparent", border: "5px solid #fff" }}
       ></span>
       <span
         className="bg-pulse absolute top-[200px] left-[65em] animate-pulsebg pulse-delay-3"
-        style={{ background: " transparent", border: "5px solid #fff" }}
+        style={{ background: "transparent", border: "5px solid #fff" }}
       ></span>
       <span className="bg-pulse absolute top-[500px] left-[58em] animate-pulsebg pulse-delay-2"></span>
       <span className="bg-pulse absolute top-[500px] left-[20px] animate-pulsebg pulse-delay-4"></span>
       <span
         className="bg-pulse absolute top-[500px] left-[40em] animate-pulsebg pulse-delay-1"
-        style={{ background: " transparent", border: "5px solid #fff" }}
+        style={{ background: "transparent", border: "5px solid #fff" }}
       ></span>
-      <span className="bg-pulse absolute top-[100px] left-[50em] animate-pulsebg  pulse-delay-5"></span>
+      <span className="bg-pulse absolute top-[100px] left-[50em] animate-pulsebg pulse-delay-5"></span>
 
       <svg
         viewBox="0 0 200 200"
@@ -58,26 +58,23 @@ function HeroSection() {
       </svg>
       <div className="flex flex-row">
         <div className="flex flex-col absolute top-20 gap-y-5 justify-between items-center w-1/2">
-          <p className="text-white text-3xl ">Hello I am Masud,</p>
+          <p className="text-white text-3xl">Hello, I am Masud,</p>
           <div>
-            {" "}
             <TypeAnimation
               sequence={[
                 "I am a ReactJS Developer",
                 1000,
                 "I am a NextJS Developer",
                 1000,
-                "I am a TailwindCSS Developer",
+                "I am a MERN Stack Developer",
                 1000,
-                "I am a NodeJS Developer",
-                1000,
-                "I am a MongoDB Developer",
+                "I am an IOT Developer",
                 1000,
               ]}
               speed={260}
               deletionSpeed={180}
               preRenderFirstString={true}
-              className="text-white text-3xl transform -translate-y-1/2 -translate-x-1/2 bg-transparent "
+              className="text-white text-3xl transform -translate-y-1/2 -translate-x-1/2 bg-transparent"
               repeat={Infinity}
               style={{
                 textShadow:
@@ -96,59 +93,66 @@ function HeroSection() {
             databases, I deliver complete full-stack solutions. I'm passionate
             about staying updated with industry trends.
           </p>
-          <span className="w-2/3 h-[1.5px]  bg-white"></span>
+          <span className="w-2/3 h-[1.5px] bg-white"></span>
           <div className="flex flex-row items-center text-white gap-x-3">
             <Link
-              href={""}
-              className="border rounded-full p-1 border-[#9999f4] hover-effect"
+              href={"https://github.com/mmh-masud-03"}
+              className="border rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
             >
               <FaGithub size={24} />
             </Link>
             <Link
-              href={""}
-              className="border rounded-full p-1 border-[#9999f4] hover-effect"
+              href={"https://www.linkedin.com/in/md-masud-hossen-9733611a1"}
+              className="border rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
             >
               <FaLinkedin size={24} />
             </Link>
             <Link
               href={""}
-              className="border rounded-full p-1 border-[#9999f4] hover-effect"
+              className="border rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
             >
               <FaMedium size={24} />
             </Link>
             <Link
               href={""}
-              className="border rounded-full p-1 border-[#9999f4] hover-effect"
+              className="border rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
             >
               <FaTelegram size={24} />
             </Link>
             <Link
               href={""}
-              className="border rounded-full p-1 border-[#9999f4] hover-effect"
+              className="border rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
             >
               <FaWhatsapp size={24} />
             </Link>
           </div>
           <div className="flex flex-row justify-center gap-x-6">
-            <button className="relative inline-block bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300  overflow-hidden">
+            <a
+              href="/assets/Masud-Hossen-Resume.pdf"
+              download={true}
+              className="relative inline-block bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 overflow-hidden"
+            >
               Download Resume
               <span className="absolute block top-0 left-0 w-full h-[2px] bg-gradient-leftright animate-leftright"></span>
               <span className="absolute block -top-[100%] right-0 w-[2px] h-full bg-gradient-updown animate-updown animation-delay-1"></span>
               <span className="absolute block -right-[100%] bottom-0 h-[2px] w-full bg-gradient-rightleft animate-rightleft animation-delay-2"></span>
               <span className="absolute block left-0 -bottom[100%] w-[2px] h-full bg-gradient-downup animate-downup animation-delay-3"></span>
-            </button>
-            <button className="relative inline-block bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 overflow-hidden">
+            </a>
+            <Link
+              href={"#contact"}
+              className="relative inline-block bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 overflow-hidden"
+            >
               Contact Me
               <span className="absolute block top-0 left-0 w-full h-[2px] bg-gradient-leftright animate-leftright"></span>
               <span className="absolute block -top-[100%] right-0 w-[2px] h-full bg-gradient-updown animate-updown animation-delay-1"></span>
               <span className="absolute block -right-[100%] bottom-0 h-[2px] w-full bg-gradient-rightleft animate-rightleft animation-delay-2"></span>
               <span className="absolute block left-0 -bottom[100%] w-[2px] h-full bg-gradient-downup animate-downup animation-delay-3"></span>
-            </button>
+            </Link>
           </div>
         </div>
 
         <div>
-          <div className="animate-circlepulse w-[300px] h-[300px] border rounded-full border-fuchsia-800/50 absolute right-52 top-28 ">
+          <div className="animate-circlepulse w-[300px] h-[300px] border rounded-full border-fuchsia-800/50 absolute right-52 top-28">
             <Image
               src={"/assets/images/hero pic.jpg"}
               alt=""

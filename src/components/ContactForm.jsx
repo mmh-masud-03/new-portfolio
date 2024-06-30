@@ -59,7 +59,10 @@ export const ContactUs = () => {
   }, [status]);
 
   return (
-    <section id="contact" className="bg-black text-white p-8 max-w-2xl mx-auto">
+    <section
+      id="contact"
+      className="bg-black text-white p-8 max-w-2xl mx-auto pt-20"
+    >
       <h1 className="text-4xl font-bold mb-8">
         <span className="text-yellow-300">Get In Touch</span>
       </h1>
