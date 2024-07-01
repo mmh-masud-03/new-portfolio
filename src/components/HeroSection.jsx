@@ -11,33 +11,34 @@ import {
 import Link from "next/link";
 import CountUp from "./CountUpComponent";
 import MouseAnimation from "./MouseAnimation";
+import { motion } from "framer-motion";
 
 function HeroSection() {
   return (
     <section
       id="about"
-      className="hero-dots-container min-h-[95vh] w-full mb-5"
+      className="hero-dots-container min-h-[95vh] w-full mb-5 overflow-hidden"
     >
       <span
-        className="bg-pulse absolute top-[120px] left-20 animate-pulsebg pulse-delay-1"
+        className="bg-pulse absolute top-[15%] left-[5%] animate-pulsebg pulse-delay-1"
         style={{ background: "transparent", border: "5px solid #fff" }}
       ></span>
       <span
-        className="bg-pulse absolute top-[200px] left-[65em] animate-pulsebg pulse-delay-3"
+        className="bg-pulse absolute top-[20%] lg:top-[40%] right-[12%]  animate-pulsebg pulse-delay-3"
         style={{ background: "transparent", border: "5px solid #fff" }}
       ></span>
-      <span className="bg-pulse absolute top-[500px] left-[58em] animate-pulsebg pulse-delay-2"></span>
-      <span className="bg-pulse absolute top-[500px] left-[20px] animate-pulsebg pulse-delay-4"></span>
+      <span className="bg-pulse absolute bottom-[1%] right-[20%] animate-pulsebg pulse-delay-2"></span>
+      <span className="bg-pulse absolute bottom-[2%] left-[2%]  animate-pulsebg pulse-delay-4"></span>
       <span
-        className="bg-pulse absolute top-[500px] left-[40em] animate-pulsebg pulse-delay-1"
+        className="bg-pulse absolute -bottom-[1%] right-[45%] animate-pulsebg pulse-delay-1"
         style={{ background: "transparent", border: "5px solid #fff" }}
       ></span>
-      <span className="bg-pulse absolute top-[100px] left-[50em] animate-pulsebg pulse-delay-5"></span>
+      <span className="bg-pulse absolute top-[14%] right-[30%]  animate-pulsebg pulse-delay-5"></span>
 
       <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-[300px] h-[350px] absolute -left-20 -top-40"
+        className=" w-[40%]  h-[40%] absolute -left-[15%] -top-[15%]"
       >
         <path
           fill="#8093F1"
@@ -48,7 +49,7 @@ function HeroSection() {
       <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-[300px] h-[350px] absolute -right-20 top-10"
+        className="w-[50%] h-[50%] absolute -right-[20%] top-[24%]"
       >
         <path
           fill="#8093F1"
@@ -56,9 +57,9 @@ function HeroSection() {
           transform="translate(100 100)"
         />
       </svg>
-      <div className="flex flex-row">
-        <div className="flex flex-col absolute top-20 gap-y-5 justify-between items-center w-1/2">
-          <p className="text-white text-3xl">Hello, I am Masud,</p>
+      <motion.div className=" px-8 flex flex-col-reverse gap-6 lg:gap-x-12 lg:pt-16 lg:flex-row z-10">
+        <div className="flex flex-col gap-y-5 justify-between items-center w-1/2">
+          <p className="text-white text-lg lg:text-3xl">Hello, I am Masud,</p>
           <div>
             <TypeAnimation
               sequence={[
@@ -74,7 +75,7 @@ function HeroSection() {
               speed={260}
               deletionSpeed={180}
               preRenderFirstString={true}
-              className="text-white text-3xl transform -translate-y-1/2 -translate-x-1/2 bg-transparent"
+              className="text-white w-full text-md lg:text-3xl transform -translate-y-1/2 -translate-x-1/2 bg-transparent"
               repeat={Infinity}
               style={{
                 textShadow:
@@ -85,13 +86,13 @@ function HeroSection() {
               }}
             />
           </div>
-          <p className="text-white text-lg pl-3">
-            A full-stack developer specializing in Next.js, React.js, and modern
-            web technologies. I excel in building high-performance,
-            server-rendered React apps and dynamic UIs, with a focus on
-            performance and SEO. With experience in Node.js, Express, and
-            databases, I deliver complete full-stack solutions. I'm passionate
-            about staying updated with industry trends.
+          <p className="text-white text-base lg:text-lg pl-3">
+            A self-taught full-stack developer specializing in Next.js,
+            React.js, and modern web technologies. I excel in building
+            high-performance, server-rendered React apps and dynamic UIs, with a
+            focus on performance and SEO. With experience in Node.js, Express,
+            and databases, I deliver complete full-stack solutions. I'm
+            passionate about staying updated with industry trends.
           </p>
           <span className="w-2/3 h-[1.5px] bg-white"></span>
           <div className="flex flex-row items-center text-white gap-x-3">
@@ -151,18 +152,18 @@ function HeroSection() {
           </div>
         </div>
 
-        <div>
-          <div className="animate-circlepulse w-[300px] h-[300px] border rounded-full border-fuchsia-800/50 absolute right-52 top-28">
+        <div className="pt-10 pl-12 z-10">
+          <div className="animate-circlepulse w-[60%] h-[60%] lg:w-[300px] lg:h-[300px] border rounded-full border-fuchsia-800/50 ">
             <Image
               src={"/assets/images/hero pic.jpg"}
               alt=""
-              height={280}
+              height={300}
               width={300}
               className="rounded-full"
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
