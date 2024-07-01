@@ -59,7 +59,7 @@ function HeroSection() {
           transform="translate(100 100)"
         />
       </svg>
-      <motion.div className=" px-8 flex flex-col-reverse gap-6 lg:gap-x-12 lg:pt-24 pt-10 lg:flex-row z-50">
+      <motion.div className="px-4 lg:px-8 flex flex-col-reverse gap-6 lg:gap-x-12 lg:pt-24 pt-10 lg:flex-row z-50">
         <div className="flex flex-col gap-y-5 justify-between items-center w-full lg:w-1/2">
           <p className="text-white/75 text-xl lg:text-4xl font-bold font-montserrat">
             Hello, I am{" "}
@@ -146,7 +146,7 @@ function HeroSection() {
             <a
               href="/assets/Masud-Hossen-Resume.pdf"
               download={true}
-              className=" font-raleway text-sm lg:text-lg relative inline-block bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 overflow-hidden"
+              className="text-center font-raleway text-sm lg:text-lg relative inline-block bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 overflow-hidden"
             >
               Download Resume
               <span className="absolute block top-0 left-0 w-full h-[2px] bg-gradient-leftright animate-leftright"></span>
@@ -156,7 +156,7 @@ function HeroSection() {
             </a>
             <Link
               href={"#contact"}
-              className=" font-raleway relative inline-block bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 overflow-hidden"
+              className="text-center text-sm lg:text-lg font-raleway relative inline-block bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 overflow-hidden"
             >
               Contact Me
               <span className="absolute block top-0 left-0 w-full h-[2px] bg-gradient-leftright animate-leftright"></span>
