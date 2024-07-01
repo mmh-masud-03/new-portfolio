@@ -15,6 +15,7 @@ export const experiences = [
     duration: "January 2024 - April 2024",
     description: [
       "Gained hands-on experience with Next.js as a full-stack framework and Tailwind CSS, enhancing web development skills.",
+      "Knew about state management using Redux Toolkit and API integration with Axios.",
       "Contributed to a multi-vendor POS system by designing reusable components, integrating API endpoints, and implementing features and functionalities. Optimized website load time by 25%, improving user experience.",
     ],
   },
@@ -48,13 +49,14 @@ function Experiences() {
       selectedExperience.description
         .join(" ")
         .match(
-          /\b(React|Next\.js|Tailwind CSS|JavaScript|HTML|CSS|FastAPI)\b/g
+          /\b(React|Next\.js|Tailwind CSS|Redux Toolkit|JavaScript|HTML|CSS|FastAPI)\b/g
         ) || [];
     setActiveSkills([...new Set(skillsUsed)]);
   }, [selectedExperience]);
 
   const allSkills = [
     "React",
+    "Redux Toolkit",
     "Next.js",
     "Tailwind CSS",
     "JavaScript",

@@ -31,7 +31,7 @@ function Header() {
 
   return (
     <motion.header
-      className={` container w-full p-4 fixed top-0 z-50 transition-all duration-300 ${
+      className={` w-full p-4 fixed top-0 z-50 transition-all duration-300 ${
         isScrolled ? "bg-black bg-opacity-90 shadow-lg" : "bg-transparent"
       }`}
       initial={{ y: -100 }}

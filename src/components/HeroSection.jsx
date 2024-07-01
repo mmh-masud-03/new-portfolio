@@ -7,6 +7,8 @@ import {
   FaMedium,
   FaTelegram,
   FaWhatsapp,
+  FaTwitter,
+  FaMediumM,
 } from "react-icons/fa";
 import Link from "next/link";
 import CountUp from "./CountUpComponent";
@@ -27,7 +29,7 @@ function HeroSection() {
         className="bg-pulse absolute top-[20%] lg:top-[40%] right-[12%]  animate-pulsebg pulse-delay-3"
         style={{ background: "transparent", border: "5px solid #fff" }}
       ></span>
-      <span className="bg-pulse absolute bottom-[1%] right-[20%] animate-pulsebg pulse-delay-2"></span>
+      <span className="bg-pulse absolute bottom-[1%] right-[10%] lg:right-[20%] animate-pulsebg pulse-delay-2"></span>
       <span className="bg-pulse absolute bottom-[24%] lg:bottom-[2%] left-[2%]  animate-pulsebg pulse-delay-4"></span>
       <span
         className="bg-pulse absolute -bottom-[1%] right-[45%] animate-pulsebg pulse-delay-1"
@@ -57,9 +59,11 @@ function HeroSection() {
           transform="translate(100 100)"
         />
       </svg>
-      <motion.div className=" px-8 flex flex-col-reverse gap-6 lg:gap-x-12 lg:pt-16 lg:flex-row z-50">
+      <motion.div className=" px-8 flex flex-col-reverse gap-6 lg:gap-x-12 lg:pt-24 pt-10 lg:flex-row z-50">
         <div className="flex flex-col gap-y-5 justify-between items-center w-full lg:w-1/2">
-          <p className="text-white text-lg lg:text-3xl">Hello, I am Masud,</p>
+          <p className="text-white/75 text-lg lg:text-3xl">
+            Hello, I am Masud,
+          </p>
           <div>
             <TypeAnimation
               sequence={[
@@ -75,7 +79,7 @@ function HeroSection() {
               speed={260}
               deletionSpeed={180}
               preRenderFirstString={true}
-              className="text-white w-full text-md lg:text-3xl transform -translate-y-1/2 -translate-x-1/2 bg-transparent"
+              className=" text-white/85 w-full text-md lg:text-3xl transform -translate-y-1/2 -translate-x-1/2 bg-transparent"
               repeat={Infinity}
               style={{
                 textShadow:
@@ -83,10 +87,11 @@ function HeroSection() {
                 WebkitBoxReflect:
                   "below 0px linear-gradient(transparent, #0005)",
                 backgroundClip: "text",
+                zIndex: 10,
               }}
             />
           </div>
-          <p className="text-white text-base lg:text-lg pl-3 text-justify">
+          <p className="text-[#E0E0E0] text-base lg:text-lg pl-3 text-justify">
             A self-taught full-stack developer specializing in Next.js,
             React.js, and modern web technologies. I excel in building
             high-performance, server-rendered React apps and dynamic UIs, with a
@@ -94,44 +99,42 @@ function HeroSection() {
             and databases, I deliver complete full-stack solutions. I'm
             passionate about staying updated with industry trends.
           </p>
-          <span className="w-2/3 h-[1.5px] bg-white"></span>
-          <div className="flex flex-row items-center text-white gap-x-3">
+          <span className="w-2/3 h-[1.5px] bg-white/80"></span>
+          <div className="flex flex-row items-center text-white/85 gap-x-3 z-30">
             <Link
-              href={"https://github.com/mmh-masud-03"}
+              href="https://github.com/mmh-masud-03"
               className="border rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
+              target="_blank"
             >
               <FaGithub size={24} />
             </Link>
             <Link
-              href={"https://www.linkedin.com/in/md-masud-hossen-9733611a1"}
-              className="border rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
+              href="https://www.linkedin.com/in/md-masud-hossen-9733611a1"
+              className="border rounded-full p-2 border-[#9999f4] hover:bg-[#4949d3] transition duration-300"
+              target="_blank"
             >
               <FaLinkedin size={24} />
             </Link>
             <Link
-              href={""}
+              href="https://medium.com/@masud20.bup"
               className="border rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
+              target="_blank"
             >
               <FaMedium size={24} />
             </Link>
             <Link
-              href={""}
-              className="border rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
+              href="https://x.com/MasudHosse47600"
+              className="border rounded-full p-2 border-[#9999f4] hover:bg-[#3c3ce8] transition duration-300"
+              target="_blank"
             >
-              <FaTelegram size={24} />
-            </Link>
-            <Link
-              href={""}
-              className="border rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
-            >
-              <FaWhatsapp size={24} />
+              <FaTwitter size={24} />
             </Link>
           </div>
           <div className="flex flex-row justify-center gap-x-6 pb-5">
             <a
               href="/assets/Masud-Hossen-Resume.pdf"
               download={true}
-              className="relative inline-block bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 overflow-hidden"
+              className="relative inline-block bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 overflow-hidden"
             >
               Download Resume
               <span className="absolute block top-0 left-0 w-full h-[2px] bg-gradient-leftright animate-leftright"></span>
@@ -141,7 +144,7 @@ function HeroSection() {
             </a>
             <Link
               href={"#contact"}
-              className="relative inline-block bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 overflow-hidden"
+              className="relative inline-block bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 overflow-hidden"
             >
               Contact Me
               <span className="absolute block top-0 left-0 w-full h-[2px] bg-gradient-leftright animate-leftright"></span>
@@ -159,7 +162,7 @@ function HeroSection() {
               alt=""
               height={300}
               width={300}
-              className="rounded-full"
+              className="rounded-full object-cover"
             />
           </div>
         </div>

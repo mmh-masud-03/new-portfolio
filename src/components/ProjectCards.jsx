@@ -51,16 +51,6 @@ const portfolioData = [
     github: "https://github.com/mmh-masud-03/todo-next",
     tech: ["React", "Next.js", "Tailwind CSS"],
   },
-  // {
-  //   title: "Blog Site",
-  //   type: "Blog",
-  //   description:
-  //     "A personal blog site built with React.js. You can navigate between the routes easily. The components are reusable. The blog posts are written in jsx and rendered dynamically.",
-  //   image: "/assets/images/blog-react.png",
-  //   url: "#",
-  //   github: "https://github.com/mmh-masud-03/Blog_React",
-  //   tech: ["React.js", "Markdown", "CSS"],
-  // },
   {
     title: "Resort Site",
     type: "Frontend",
@@ -91,7 +81,6 @@ function ProjectCards() {
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={30}
           slidesPerView={2}
-          Navigation={true}
           navigation={{
             prevEl: prevRef.current,
             nextEl: nextRef.current,
@@ -104,17 +93,21 @@ function ProjectCards() {
           onSlideChange={(swiper) => handleSwiperState(swiper)}
           onSwiper={(swiper) => handleSwiperState(swiper)}
           breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
             640: {
               slidesPerView: 1,
               spaceBetween: 20,
             },
             768: {
-              slidesPerView: 1,
-              spaceBetween: 40,
+              slidesPerView: 2,
+              spaceBetween: 30,
             },
             1024: {
               slidesPerView: 2,
-              spaceBetween: 50,
+              spaceBetween: 40,
             },
           }}
         >
@@ -157,7 +150,7 @@ function ProjectCards() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <span className="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 transition flex items-center gap-2">
+                        <span className="bg-yellow-300 text-black px-4 py-2 rounded shadow hover:bg-blue-600 transition flex items-center gap-2">
                           <FaExternalLinkAlt size={32} />
                         </span>
                       </Link>
@@ -180,7 +173,7 @@ function ProjectCards() {
         <div className="flex justify-around px-6 mt-8">
           <button
             ref={prevRef}
-            className={`bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
+            className={`bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
               isBeginning ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={isBeginning}
@@ -189,7 +182,7 @@ function ProjectCards() {
           </button>
           <button
             ref={nextRef}
-            className={`bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
+            className={`bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
               isEnd ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={isEnd}

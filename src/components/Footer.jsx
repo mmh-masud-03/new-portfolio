@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="h-[50vh] min-w-full relative text-white">
+    <div className="h-[17vh] lg:h-[50vh] min-w-full relative text-white">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
@@ -20,7 +20,7 @@ function Footer() {
         <div className="flex flex-col justify-center items-center space-y-6 text-center">
           <div className="flex space-x-6">
             <a
-              href="https://www.linkedin.com/in/masudhossen"
+              href="https://www.linkedin.com/in/md-masud-hossen-9733611a1/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -28,7 +28,7 @@ function Footer() {
               <FaLinkedin size={30} />
             </a>
             <a
-              href="https://github.com/masudhossen"
+              href="https://github.com/mmh-masud-03"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -36,14 +36,14 @@ function Footer() {
               <FaGithub size={30} />
             </a>
             <a
-              href="https://twitter.com/masudhossen"
+              href="https://x.com/MasudHosse47600"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
             >
               <FaTwitter size={30} />
             </a>
-            <a href="mailto:masudhossen@example.com" aria-label="Email">
+            <a href="mailto:masud20.bup@gmail.com" aria-label="Email">
               <FaEnvelope size={30} />
             </a>
           </div>

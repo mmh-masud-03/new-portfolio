@@ -41,7 +41,7 @@ const projectData = [
     title: "Touchless Sprayer",
     description:
       "Designed and built a touchless hand sanitizer dispenser to promote hygiene practices.",
-    image: "/images/",
+    image: "/assets/images/robotics/touchless-sprayer.jpg", // Corrected image source
     tech: ["IR Sensor", "Servo"],
   },
   {
@@ -71,6 +71,7 @@ const projectData = [
     ],
   },
 ];
+
 function RoboticsProjects() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -107,11 +108,11 @@ function RoboticsProjects() {
             },
             768: {
               slidesPerView: 2,
-              spaceBetween: 40,
+              spaceBetween: 30,
             },
             1024: {
-              slidesPerView: 2,
-              spaceBetween: 50,
+              slidesPerView: 3,
+              spaceBetween: 40,
             },
           }}
         >
@@ -119,9 +120,9 @@ function RoboticsProjects() {
             <SwiperSlide key={project.title}>
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="h-[65vh] bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 project-card"
+                className="h-[68vh] bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 project-card"
               >
-                <div className="relative h-48">
+                <div className="relative h-48 lg:h-[30vh]">
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -131,15 +132,17 @@ function RoboticsProjects() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-lg font-semibold text-gray-900">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 mt-2">{project.description}</p>
+                  <p className="text-gray-600 md:text-sm mt-2">
+                    {project.description}
+                  </p>
                   <div className="flex flex-wrap mt-4">
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="text-sm text-gray-600 bg-gray-200 py-1 px-2 rounded mr-2 mb-2"
+                        className="md:text-xs text-gray-600 bg-gray-200 py-1 px-2 rounded mr-2 mb-2"
                       >
                         {tech}
                       </span>
@@ -154,7 +157,7 @@ function RoboticsProjects() {
         <div className="flex justify-around px-6 mt-8">
           <button
             ref={prevRef}
-            className={`bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
+            className={`bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
               isBeginning ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={isBeginning}
@@ -163,7 +166,7 @@ function RoboticsProjects() {
           </button>
           <button
             ref={nextRef}
-            className={`bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
+            className={`bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
               isEnd ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={isEnd}
