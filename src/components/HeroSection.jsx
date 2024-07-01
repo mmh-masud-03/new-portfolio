@@ -17,7 +17,7 @@ function HeroSection() {
   return (
     <section
       id="about"
-      className="hero-dots-container min-h-[95vh] w-full mb-5 overflow-hidden"
+      className="hero-dots-container min-h-[80vh] lg:min-h-[95vh] w-full mb-5 overflow-hidden"
     >
       <span
         className="bg-pulse absolute top-[15%] left-[5%] animate-pulsebg pulse-delay-1"
@@ -28,7 +28,7 @@ function HeroSection() {
         style={{ background: "transparent", border: "5px solid #fff" }}
       ></span>
       <span className="bg-pulse absolute bottom-[1%] right-[20%] animate-pulsebg pulse-delay-2"></span>
-      <span className="bg-pulse absolute bottom-[2%] left-[2%]  animate-pulsebg pulse-delay-4"></span>
+      <span className="bg-pulse absolute bottom-[24%] lg:bottom-[2%] left-[2%]  animate-pulsebg pulse-delay-4"></span>
       <span
         className="bg-pulse absolute -bottom-[1%] right-[45%] animate-pulsebg pulse-delay-1"
         style={{ background: "transparent", border: "5px solid #fff" }}
@@ -49,7 +49,7 @@ function HeroSection() {
       <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-[50%] h-[50%] absolute -right-[20%] top-[24%]"
+        className="w-[50%] h-[50%] absolute -right-[20%] top-[4%] lg:top-[29%]"
       >
         <path
           fill="#8093F1"
@@ -57,8 +57,8 @@ function HeroSection() {
           transform="translate(100 100)"
         />
       </svg>
-      <motion.div className=" px-8 flex flex-col-reverse gap-6 lg:gap-x-12 lg:pt-16 lg:flex-row z-10">
-        <div className="flex flex-col gap-y-5 justify-between items-center w-1/2">
+      <motion.div className=" px-8 flex flex-col-reverse gap-6 lg:gap-x-12 lg:pt-16 lg:flex-row z-50">
+        <div className="flex flex-col gap-y-5 justify-between items-center w-full lg:w-1/2">
           <p className="text-white text-lg lg:text-3xl">Hello, I am Masud,</p>
           <div>
             <TypeAnimation
@@ -86,7 +86,7 @@ function HeroSection() {
               }}
             />
           </div>
-          <p className="text-white text-base lg:text-lg pl-3">
+          <p className="text-white text-base lg:text-lg pl-3 text-justify">
             A self-taught full-stack developer specializing in Next.js,
             React.js, and modern web technologies. I excel in building
             high-performance, server-rendered React apps and dynamic UIs, with a
@@ -127,7 +127,7 @@ function HeroSection() {
               <FaWhatsapp size={24} />
             </Link>
           </div>
-          <div className="flex flex-row justify-center gap-x-6">
+          <div className="flex flex-row justify-center gap-x-6 pb-5">
             <a
               href="/assets/Masud-Hossen-Resume.pdf"
               download={true}
