@@ -119,7 +119,7 @@ function RoboticsProjects() {
             <SwiperSlide key={project.title}>
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="h-[70vh] bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 project-card"
+                className="h-[65vh] bg-white shadow-lg rounded-lg overflow-hidden transition-transform duration-300 project-card"
               >
                 <div className="relative h-48">
                   <Image

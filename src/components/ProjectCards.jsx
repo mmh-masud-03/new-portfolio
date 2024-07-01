@@ -85,12 +85,13 @@ function ProjectCards() {
   };
 
   return (
-    <div className="container mx-auto py-4 px-6">
+    <div className="container mx-auto py-6 px-6">
       <div className="relative">
         <Swiper
           modules={[Navigation, Pagination, A11y]}
           spaceBetween={30}
           slidesPerView={2}
+          Navigation={true}
           navigation={{
             prevEl: prevRef.current,
             nextEl: nextRef.current,
