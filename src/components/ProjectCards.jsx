@@ -119,10 +119,12 @@ function ProjectCards() {
               >
                 <div className="flex flex-col">
                   <div className="flex flex-row justify-between text-black mb-2 border-b-2">
-                    <h3 className="text-2xl font-semibold mt-4">
+                    <h3 className="font-montserrat text-2xl font-semibold mt-4">
                       {data.title}
                     </h3>
-                    <h3 className="italic font-semibold mt-4">{data.type}</h3>
+                    <h3 className="font-firacode italic font-semibold mt-4">
+                      {data.type}
+                    </h3>
                   </div>
 
                   <Image
@@ -134,9 +136,13 @@ function ProjectCards() {
                   />
                 </div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-[0.85] rounded-lg ">
-                  <p className="mt-2 text-white px-4">{data.description}</p>
+                  <p className="mt-2 text-white px-6 font-opensans">
+                    {data.description}
+                  </p>
                   <div className="mt-4 flex flex-wrap justify-center gap-2">
-                    <span className="text-white border-b-2">Technologies:</span>
+                    <span className="text-white border-b-2 font-firacode">
+                      Technologies:
+                    </span>
                     {data.tech.map((tech, i) => (
                       <div key={i} className="text-white">
                         {tech},
@@ -173,7 +179,7 @@ function ProjectCards() {
         <div className="flex justify-around px-6 mt-8">
           <button
             ref={prevRef}
-            className={`bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
+            className={`font-raleway bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
               isBeginning ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={isBeginning}
@@ -182,7 +188,7 @@ function ProjectCards() {
           </button>
           <button
             ref={nextRef}
-            className={`bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
+            className={`font-raleway bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
               isEnd ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={isEnd}

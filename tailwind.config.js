@@ -10,6 +10,13 @@ module.exports = {
 
   theme: {
     extend: {
+      fontFamily: {
+        montserrat: ["var(--font-montserrat)"],
+        opensans: ["var(--font-opensans)"],
+        firacode: ["var(--font-firacode)"],
+        raleway: ["var(--font-raleway)"],
+        roboto: ["var(--font-roboto)"],
+      },
       backgroundImage: {
         "gradient-leftright": "linear-gradient(90deg, transparent, #006400)",
         "gradient-updown": "linear-gradient(180deg, transparent, #006400)",

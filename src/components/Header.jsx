@@ -58,7 +58,7 @@ function Header() {
               key={item.id}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="text-lg text-yellow-300 hover:text-gray-300 transition-colors duration-200 cursor-pointer relative group"
+              className="text-lg font-medium tracking-wide font-roboto text-yellow-300 hover:text-gray-300 transition-colors duration-200 cursor-pointer relative group"
               onClick={() => scrollToSection(item.id)}
             >
               {item.name}
@@ -99,7 +99,7 @@ function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden absolute top-full left-0 right-0 bg-black bg-opacity-90 py-4"
+            className="md:hidden font-roboto absolute top-full left-0 right-0 bg-black bg-opacity-90 py-4"
           >
             {navItems.map((item) => (
               <motion.a

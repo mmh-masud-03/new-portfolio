@@ -102,7 +102,7 @@ function Experiences() {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-16 text-center"
+          className="text-4xl font-montserrat font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-16 text-center"
         >
           Working Experiences
         </motion.h2>
@@ -120,8 +120,12 @@ function Experiences() {
                     : "bg-gray-800 text-gray-300 hover:bg-gray-700"
                 }`}
               >
-                <h3 className="font-bold text-xl mb-1">{experience.company}</h3>
-                <p className="text-sm opacity-80">{experience.duration}</p>
+                <h3 className="font-bold text-xl mb-1 font-raleway">
+                  {experience.company}
+                </h3>
+                <p className="text-sm opacity-80 font-opensans">
+                  {experience.duration}
+                </p>
               </motion.button>
             ))}
           </motion.div>
@@ -135,13 +139,13 @@ function Experiences() {
                 transition={{ duration: 0.3 }}
                 className="bg-white p-8 rounded-2xl shadow-2xl"
               >
-                <h3 className="text-3xl font-bold mb-3 text-gray-800">
+                <h3 className="text-3xl font-bold mb-3 text-gray-800 font-montserrat">
                   {selectedExperience.title}
                 </h3>
-                <h4 className="text-xl font-semibold mb-2 text-indigo-600">
+                <h4 className="text-xl font-semibold mb-2 text-indigo-600 font-firacode">
                   {selectedExperience.company}
                 </h4>
-                <span className="text-gray-600 text-sm bg-gray-200 px-3 py-1 rounded-full">
+                <span className="text-gray-600 text-sm bg-gray-200 px-3 py-1 rounded-full font-opensans">
                   {selectedExperience.duration}
                 </span>
                 <ul className="mt-8 space-y-6">
@@ -151,7 +155,7 @@ function Experiences() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.2 }}
-                      className="flex items-start"
+                      className="flex items-start font-opensans"
                     >
                       <svg
                         className="w-6 h-6 text-indigo-600 mr-3 flex-shrink-0"
@@ -178,7 +182,7 @@ function Experiences() {
           </motion.div>
         </div>
         <motion.div variants={itemVariants} className="mt-16">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">
+          <h3 className="text-2xl font-bold text-white mb-6 text-center font-montserrat">
             Skills Utilized
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
@@ -192,7 +196,7 @@ function Experiences() {
                 className="relative"
               >
                 <div
-                  className={`px-4 py-2 rounded-full font-semibold cursor-pointer transition-colors duration-300 ${
+                  className={`font-firacode px-4 py-2 rounded-full font-semibold cursor-pointer transition-colors duration-300 ${
                     activeSkills.includes(skill)
                       ? "bg-indigo-600 text-white"
                       : "bg-gray-200 text-gray-600"
@@ -207,7 +211,7 @@ function Experiences() {
         <motion.div variants={itemVariants} className="mt-16">
           <button
             onClick={() => setIsTimelineOpen(!isTimelineOpen)}
-            className="bg-white text-indigo-600 px-6 py-3 rounded-full font-bold hover:bg-indigo-100 transition-colors duration-300"
+            className="font-raleway bg-white text-indigo-600 px-6 py-3 rounded-full font-bold hover:bg-indigo-100 transition-colors duration-300"
           >
             {isTimelineOpen ? "Hide" : "Show"} Career Timeline
           </button>
@@ -230,9 +234,13 @@ function Experiences() {
                         )}
                       </div>
                       <div>
-                        <h4 className="text-xl font-bold">{exp.company}</h4>
+                        <h4 className="text-xl font-bold font-montserrat">
+                          {exp.company}
+                        </h4>
                         <p className="text-gray-600">{exp.duration}</p>
-                        <p className="text-gray-800 mt-2">{exp.title}</p>
+                        <p className="text-gray-800 mt-2 font-opensans">
+                          {exp.title}
+                        </p>
                       </div>
                     </div>
                   ))}

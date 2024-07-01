@@ -61,23 +61,23 @@ export const ContactUs = () => {
   return (
     <section
       id="contact"
-      className="bg-black text-white p-8 max-w-2xl mx-auto pt-20"
+      className="bg-black text-white/95 p-8 max-w-2xl mx-auto pt-20"
     >
       <h1 className="text-4xl font-bold mb-8">
-        <span className="text-yellow-300">Get In Touch</span>
+        <span className="font-montserrat text-yellow-300/95">Get In Touch</span>
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <h2 className="text-2xl font-bold text-yellow-300 mb-4">
+          <h2 className="text-2xl font-bold text-yellow-300/95 mb-4">
             Send a Message
           </h2>
-          <p className="mb-6">
+          <p className="mb-6 font-opensans">
             Feel free to get in touch with me. I'm always open to discussing new
             projects, creative ideas, or opportunities to be part of your
             vision.
           </p>
-          <div className="space-y-2">
+          <div className="space-y-2 font-montserrat">
             <p className="flex items-center">
               <span className="material-icons mr-2">
                 <FaEnvelope />
@@ -99,9 +99,13 @@ export const ContactUs = () => {
           </div>
         </div>
 
-        <form ref={form} onSubmit={sendEmail} className="space-y-4">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="space-y-4 font-montserrat"
+        >
           <input
-            className="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-yellow-300"
+            className="w-full bg-transparent border-b border-gray-500 py-2 focus:outline-none focus:border-yellow-300"
             type="text"
             name="from_name"
             placeholder="Name"
@@ -110,7 +114,7 @@ export const ContactUs = () => {
             required
           />
           <input
-            className="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-yellow-300"
+            className="w-full bg-transparent border-b border-gray-500 py-2 focus:outline-none focus:border-yellow-300"
             type="email"
             name="user_email"
             placeholder="Email"
@@ -119,7 +123,7 @@ export const ContactUs = () => {
             required
           />
           <textarea
-            className="w-full bg-transparent border-b border-gray-600 py-2 focus:outline-none focus:border-yellow-300"
+            className="w-full bg-transparent border-b border-gray-500 py-2 focus:outline-none focus:border-yellow-300"
             name="message"
             rows="4"
             placeholder="Message"
@@ -129,7 +133,7 @@ export const ContactUs = () => {
           />
           <button
             type="submit"
-            className={`bg-yellow-300 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
+            className={`font-raleway bg-yellow-300/95 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
               isSending ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={isSending}

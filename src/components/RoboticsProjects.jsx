@@ -132,17 +132,17 @@ function RoboticsProjects() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900">
+                  <h3 className="text-lg font-semibold text-gray-900 font-montserrat">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 md:text-sm mt-2">
+                  <p className="text-gray-600 md:text-sm mt-2 font-opensans">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap mt-4">
                     {project.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="md:text-xs text-gray-600 bg-gray-200 py-1 px-2 rounded mr-2 mb-2"
+                        className="md:text-xs font-firacode text-gray-600 bg-gray-200 py-1 px-2 rounded mr-2 mb-2"
                       >
                         {tech}
                       </span>
@@ -157,7 +157,7 @@ function RoboticsProjects() {
         <div className="flex justify-around px-6 mt-8">
           <button
             ref={prevRef}
-            className={`bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
+            className={`font-raleway bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
               isBeginning ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={isBeginning}
@@ -166,7 +166,7 @@ function RoboticsProjects() {
           </button>
           <button
             ref={nextRef}
-            className={`bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
+            className={`font-raleway bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 ${
               isEnd ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={isEnd}

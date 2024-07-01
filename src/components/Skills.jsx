@@ -95,14 +95,14 @@ function Skills() {
       id="skills"
       className="relative min-h-[60vh] px-4 py-12 bg-gray-900 text-white pt-24 overflow-hidden"
     >
-      <h2 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-16 text-center">
+      <h2 className="text-4xl font-montserrat font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-16 text-center">
         Skills
       </h2>
       <div className="flex flex-wrap justify-center gap-8">
         {skillsData.map((category) => (
           <div
             key={category.category}
-            className="bg-gray-800 rounded-lg p-6 w-[30%] min-w-[280px]"
+            className="bg-gray-800 rounded-lg p-6 w-[30%] min-w-[280px] font-montserrat"
           >
             <h3 className="text-xl font-semibold mb-4 border-b text-center pb-3">
               {category.category}
@@ -120,7 +120,9 @@ function Skills() {
                     height={65}
                     className="mb-2 z-10 relative"
                   />
-                  <p className="text-sm z-10 relative">{skill.name}</p>
+                  <p className="text-sm z-10 relative font-firacode">
+                    {skill.name}
+                  </p>
                   <div
                     className="skill-fill absolute bottom-0 left-0 right-0 bg-blue-500 opacity-75 transition-all duration-500 ease-out"
                     style={{
@@ -130,7 +132,9 @@ function Skills() {
                   >
                     <div className="bubble-animation" />
                   </div>
-                  <span className="skill-level absolute inset-0 flex items-center justify-center text-white font-bold opacity-0 group-hover:opacity-100 transition-opacity z-20"></span>
+                  <span className="skill-level absolute inset-0 flex items-center justify-center text-white font-bold opacity-0 group-hover:opacity-100 transition-opacity z-20">
+                    {skill.level}
+                  </span>
                 </div>
               ))}
             </div>
