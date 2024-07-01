@@ -61,8 +61,11 @@ function HeroSection() {
       </svg>
       <motion.div className=" px-8 flex flex-col-reverse gap-6 lg:gap-x-12 lg:pt-24 pt-10 lg:flex-row z-50">
         <div className="flex flex-col gap-y-5 justify-between items-center w-full lg:w-1/2">
-          <p className="text-white/75 text-lg lg:text-4xl font-montserrat">
-            Hello, I am Masud,
+          <p className="text-white/75 text-xl lg:text-4xl font-bold font-montserrat">
+            Hello, I am{" "}
+            <span className="font-montserrat text-yellow-500 hover:animate-pulse z-10">
+              MASUD
+            </span>
           </p>
           <div>
             <TypeAnimation
@@ -79,7 +82,7 @@ function HeroSection() {
               speed={260}
               deletionSpeed={180}
               preRenderFirstString={true}
-              className=" font-montserrat text-white/85 w-full text-md lg:text-3xl transform -translate-y-1/2 -translate-x-1/2 bg-transparent"
+              className="font-semibold font-montserrat text-white/85 w-full text-md lg:text-3xl transform -translate-y-1/2 -translate-x-1/2 bg-transparent"
               repeat={Infinity}
               style={{
                 textShadow:
@@ -91,11 +94,11 @@ function HeroSection() {
               }}
             />
           </div>
-          <p className="text-white/90 text-base lg:text-lg pl-3 text-justify font-opensans">
+          <p className="text-white/90 text-base lg:text-lg text-justify font-opensans mx-auto">
             A self-taught full-stack developer specializing in{" "}
             <span className="font-firacode text-yellow-300/90 font-semibold">
               {" "}
-              Next.js, React.js
+              Next.js, React.js, Tailwind CSS
             </span>
             , and modern web technologies. I excel in building high-performance,
             server-rendered React apps and dynamic UIs, with a focus on
@@ -115,35 +118,35 @@ function HeroSection() {
               className="border rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
               target="_blank"
             >
-              <FaGithub size={24} />
+              <FaGithub size={28} />
             </Link>
             <Link
               href="https://www.linkedin.com/in/md-masud-hossen-9733611a1"
               className="border rounded-full p-2 border-[#9999f4] hover:bg-[#4949d3] transition duration-300"
               target="_blank"
             >
-              <FaLinkedin size={24} />
+              <FaLinkedin size={28} />
             </Link>
             <Link
               href="https://medium.com/@masud20.bup"
               className="border rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
               target="_blank"
             >
-              <FaMedium size={24} />
+              <FaMedium size={28} />
             </Link>
             <Link
               href="https://x.com/MasudHosse47600"
               className="border rounded-full p-2 border-[#9999f4] hover:bg-[#3c3ce8] transition duration-300"
               target="_blank"
             >
-              <FaTwitter size={24} />
+              <FaTwitter size={28} />
             </Link>
           </div>
           <div className="flex flex-row justify-center gap-x-6 pb-5">
             <a
               href="/assets/Masud-Hossen-Resume.pdf"
               download={true}
-              className=" font-raleway relative inline-block bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 overflow-hidden"
+              className=" font-raleway text-sm lg:text-lg relative inline-block bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 overflow-hidden"
             >
               Download Resume
               <span className="absolute block top-0 left-0 w-full h-[2px] bg-gradient-leftright animate-leftright"></span>

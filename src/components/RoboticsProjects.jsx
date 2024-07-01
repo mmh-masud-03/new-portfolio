@@ -41,7 +41,7 @@ const projectData = [
     title: "Touchless Sprayer",
     description:
       "Designed and built a touchless hand sanitizer dispenser to promote hygiene practices.",
-    image: "/assets/images/robotics/touchless-sprayer.jpg", // Corrected image source
+    image: "/assets/images/spray.jpg",
     tech: ["IR Sensor", "Servo"],
   },
   {

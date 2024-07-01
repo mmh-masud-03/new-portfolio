@@ -36,7 +36,7 @@ function Projects() {
         transition={{ duration: 0.5 }}
         className="flex flex-col md:flex-row justify-between text-white z-10"
       >
-        <div className=" font-montserrat w-full md:w-1/5 h-full my-auto text-2xl font-semibold pl-6 py-2 rounded-lg md:rounded-r-lg shadow-lg transform md:-translate-x-4 text-yellow-300">
+        <div className="text-center font-montserrat w-full md:w-1/5 h-full my-auto text-2xl font-semibold lg:pl-6 py-2 rounded-lg md:rounded-r-lg shadow-lg transform md:-translate-x-4 text-yellow-300">
           Software projects
         </div>
         <div className="w-full md:w-[80%] bg-slate-100/10 mt-4 md:mt-0 mb-12">
@@ -50,7 +50,7 @@ function Projects() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="flex flex-col md:flex-row justify-between text-white mt-3 z-10"
       >
-        <div className="font-montserrat w-full md:w-1/5 h-full my-auto text-2xl font-semibold pl-8 py-2  rounded-lg md:rounded-r-lg shadow-lg transform md:-translate-x-4 text-yellow-300">
+        <div className="text-center font-montserrat w-full md:w-1/5 h-full my-auto text-2xl font-semibold lg:pl-5 py-2  rounded-lg md:rounded-r-lg shadow-lg transform md:-translate-x-4 text-yellow-300">
           IoT and Embedded projects
         </div>
         <div className="w-full md:w-[80%] bg-slate-100/10 mt-4 md:mt-0">
