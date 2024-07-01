@@ -92,12 +92,21 @@ function HeroSection() {
             />
           </div>
           <p className="text-white/90 text-base lg:text-lg pl-3 text-justify font-opensans">
-            A self-taught full-stack developer specializing in Next.js,
-            React.js, and modern web technologies. I excel in building
-            high-performance, server-rendered React apps and dynamic UIs, with a
-            focus on performance and SEO. With experience in Node.js, Express,
-            and databases, I deliver complete full-stack solutions. I'm
-            passionate about staying updated with industry trends.
+            A self-taught full-stack developer specializing in{" "}
+            <span className="font-firacode text-yellow-300/90 font-semibold">
+              {" "}
+              Next.js, React.js
+            </span>
+            , and modern web technologies. I excel in building high-performance,
+            server-rendered React apps and dynamic UIs, with a focus on
+            performance and{" "}
+            <span className="text-yellow-300/90 font-semibold">SEO</span>. With
+            experience in{" "}
+            <span className="font-firacode text-yellow-300/90 font-semibold">
+              Next.js, Node.js, Express, and MongoDB
+            </span>
+            , I deliver complete full-stack solutions. I'm passionate about
+            staying updated with industry trends.
           </p>
           <span className="w-2/3 h-[1.5px] bg-white/80"></span>
           <div className="flex flex-row items-center text-white/85 gap-x-3 z-30">
