@@ -94,7 +94,7 @@ function HeroSection() {
               }}
             />
           </div>
-          <p className="text-white/90 text-base lg:text-lg text-justify font-opensans mx-auto">
+          <p className="text-white/90 text-base lg:text-lg tracking-wide font-opensans mx-auto text-justify">
             A self-taught full-stack developer specializing in{" "}
             <span className="font-firacode text-yellow-300/90 font-semibold">
               {" "}
