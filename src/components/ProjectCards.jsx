@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -64,6 +64,7 @@ const portfolioData = [
 ];
 
 function ProjectCards() {
+  const [swiper, setSwiper] = useState(null);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const [isBeginning, setIsBeginning] = useState(true);
@@ -73,6 +74,15 @@ function ProjectCards() {
     setIsBeginning(swiper.isBeginning);
     setIsEnd(swiper.isEnd);
   };
+
+  useEffect(() => {
+    if (swiper) {
+      swiper.params.navigation.prevEl = prevRef.current;
+      swiper.params.navigation.nextEl = nextRef.current;
+      swiper.navigation.init();
+      swiper.navigation.update();
+    }
+  }, [swiper]);
 
   return (
     <div className="container mx-auto py-6 px-6">
@@ -86,12 +96,11 @@ function ProjectCards() {
             nextEl: nextRef.current,
           }}
           pagination={{ clickable: true }}
-          onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
+          onSwiper={(swiper) => {
+            setSwiper(swiper);
+            handleSwiperState(swiper);
           }}
           onSlideChange={(swiper) => handleSwiperState(swiper)}
-          onSwiper={(swiper) => handleSwiperState(swiper)}
           breakpoints={{
             320: {
               slidesPerView: 1,
