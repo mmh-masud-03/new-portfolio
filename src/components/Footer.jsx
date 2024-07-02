@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="h-[17vh] lg:h-[50vh] min-w-full relative text-white">
+    <div className="container mx-auto h-[17vh] lg:h-[50vh] min-w-full relative text-white">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"

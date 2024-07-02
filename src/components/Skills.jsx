@@ -94,7 +94,7 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="relative min-h-[60vh] px-4 py-12 bg-gray-900 text-white pt-24 overflow-hidden"
+      className="container mx-auto relative min-h-[60vh] px-4 py-12 bg-gray-900 text-white pt-24 overflow-hidden"
     >
       <h2 className="text-4xl font-montserrat font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-16 text-center">
         Skills

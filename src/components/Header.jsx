@@ -1,13 +1,21 @@
 "use client";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  function ScrollIndicator() {
+    const { scrollYProgress } = useScroll();
+    return (
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-blue-500 origin-[0%] z-50"
+        style={{ scaleX: scrollYProgress }}
+      />
+    );
+  }
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -114,6 +122,7 @@ function Header() {
           </motion.nav>
         )}
       </AnimatePresence>
+      <ScrollIndicator />
     </motion.header>
   );
 }

@@ -1,26 +1,15 @@
 "use client";
 import React from "react";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import ProjectCards from "./ProjectCards";
 import RoboticsProjects from "./RoboticsProjects";
-
-function ScrollIndicator() {
-  const { scrollYProgress } = useScroll();
-  return (
-    <motion.div
-      className="fixed top-0 left-0 right-0 h-1 bg-blue-500 origin-[0%] z-50"
-      style={{ scaleX: scrollYProgress }}
-    />
-  );
-}
 
 function Projects() {
   return (
     <section
       id="projects"
-      className="relative flex flex-col min-h-[80vh] text-white project-section-bg z-40 pb-10"
+      className="container mx-auto relative flex flex-col min-h-[80vh] text-white project-section-bg z-40 pb-10"
     >
-      <ScrollIndicator />
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-10"></div>
         <div className="absolute inset-0 bg-[url('random bg.png')] opacity-5"></div>

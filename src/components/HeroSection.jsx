@@ -19,7 +19,7 @@ function HeroSection() {
   return (
     <section
       id="about"
-      className="hero-dots-container min-h-[80vh] lg:min-h-[95vh] w-full mb-5 overflow-hidden"
+      className="container mx-auto hero-dots-container min-h-[80vh] lg:min-h-[95vh] w-full mb-5 overflow-hidden"
     >
       <span
         className="bg-pulse absolute top-[15%] left-[5%] animate-pulsebg pulse-delay-1"
@@ -112,31 +112,31 @@ function HeroSection() {
             staying updated with industry trends.
           </p>
           <span className="w-2/3 h-[1.5px] bg-white/80"></span>
-          <div className="flex flex-row items-center text-white/85 gap-x-3 z-30">
+          <div className="flex flex-row items-center text-white gap-x-3 z-30">
             <Link
               href="https://github.com/mmh-masud-03"
-              className="border rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
+              className="border lg:border-[1.7px] rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
               target="_blank"
             >
               <FaGithub size={28} />
             </Link>
             <Link
               href="https://www.linkedin.com/in/md-masud-hossen-9733611a1"
-              className="border rounded-full p-2 border-[#9999f4] hover:bg-[#4949d3] transition duration-300"
+              className="border lg:border-[1.7px] rounded-full p-2 border-[#9999f4] hover:bg-[#4949d3] transition duration-300"
               target="_blank"
             >
               <FaLinkedin size={28} />
             </Link>
             <Link
               href="https://medium.com/@masud20.bup"
-              className="border rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
+              className="border lg:border-[1.7px] rounded-full p-2 border-[#9999f4] hover:bg-[#9999f4] transition duration-300"
               target="_blank"
             >
               <FaMedium size={28} />
             </Link>
             <Link
               href="https://x.com/MasudHosse47600"
-              className="border rounded-full p-2 border-[#9999f4] hover:bg-[#3c3ce8] transition duration-300"
+              className="border lg:border-[1.7px] rounded-full p-2 border-[#9999f4] hover:bg-[#3c3ce8] transition duration-300"
               target="_blank"
             >
               <FaTwitter size={28} />
@@ -168,7 +168,7 @@ function HeroSection() {
         </div>
 
         <div className="pt-10 pl-12 z-10">
-          <div className="animate-circlepulse w-[60%] h-[60%] lg:w-[300px] lg:h-[300px] border rounded-full border-fuchsia-800/50 ">
+          <div className="animate-circlepulse w-[60%] h-[60%] md:bg-contain md:h-auto lg:w-[300px] lg:h-[300px] border rounded-full border-fuchsia-800/50 ">
             <Image
               src={"/assets/images/hero pic.jpg"}
               alt=""
