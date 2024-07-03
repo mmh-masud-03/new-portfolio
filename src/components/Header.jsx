@@ -50,7 +50,7 @@ function Header() {
         <Link href="/" className="text-white text-3xl font-bold">
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <Image
-              src="/assets/images/tools/coder.png"
+              src="/assets/images/logo of masud.jpg"
               alt="Logo"
               width={40}
               height={40}
