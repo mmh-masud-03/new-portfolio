@@ -28,6 +28,10 @@ module.exports = {
           "0%, 100%": { transform: "scale(1)" },
           "50%": { transform: "scale(2)" },
         },
+        mousebounce: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
         circlepulse: {
           "0%": { boxShadow: "0 0 10px #222adf" },
           "20%": { boxShadow: "0 0 15px #222adf" },
@@ -122,6 +126,7 @@ module.exports = {
         pulsebg: "pulsebg 10s linear infinite",
         bulbpulse: "bulbpulse 10s linear infinite",
         blob: "blob 5s ease-in-out infinite",
+        mousebounce: "mousebounce 1s infinite",
       },
       animationDelay: {
         0: "0s",

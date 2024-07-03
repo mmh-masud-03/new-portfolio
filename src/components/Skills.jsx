@@ -1,6 +1,73 @@
+"use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+function useIsInViewport(ref) {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) =>
+      setIsIntersecting(entry.isIntersecting)
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [ref]);
+
+  return isIntersecting;
+}
+
+function HoverInstructionOverlay({ onClose }) {
+  return (
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+      onClick={onClose}
+    >
+      <div className="text-white text-2xl flex items-center font-montserrat">
+        <svg
+          className="w-8 h-8 mr-2 animate-mousebounce"
+          style={{
+            filter: "drop-shadow(0 0 1rem white)",
+          }}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+          />
+        </svg>
+        Hover over icons
+      </div>
+    </div>
+  );
+}
+
 function Skills() {
+  const [showOverlay, setShowOverlay] = useState(false);
+  const sectionRef = useRef(null);
+  const isInViewport = useIsInViewport(sectionRef);
+
+  useEffect(() => {
+    const hasVisited = localStorage.getItem("hasVisitedSkills");
+    if (!hasVisited && isInViewport) {
+      setShowOverlay(true);
+      localStorage.setItem("hasVisitedSkills", "true");
+      const timer = setTimeout(() => setShowOverlay(false), 3500);
+      return () => clearTimeout(timer);
+    }
+  }, [isInViewport]);
+
   const skillsData = [
     {
       category: "Programming Languages",
@@ -96,12 +163,18 @@ function Skills() {
       id="skills"
       className="container mx-auto relative min-h-[60vh] px-4 py-12 bg-gray-900 text-white pt-24 overflow-hidden"
     >
+      {showOverlay && (
+        <>
+          <HoverInstructionOverlay onClose={() => setShowOverlay(false)} />
+        </>
+      )}
       <h2 className="text-4xl font-montserrat font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-16 text-center">
         Skills
       </h2>
       <div className="flex flex-wrap justify-center gap-8">
         {skillsData.map((category) => (
           <div
+            ref={sectionRef}
             key={category.category}
             className="bg-gray-800 rounded-lg p-6 w-[30%] min-w-[280px] font-montserrat"
           >
@@ -133,8 +206,8 @@ function Skills() {
                   >
                     <div className="bubble-animation" />
                   </div>
-                  <span className="skill-level absolute inset-0 flex items-center justify-center text-white font-bold opacity-0 group-hover:opacity-100 transition-opacity z-20">
-                    {skill.level}
+                  <span className="skill-level text-sm absolute inset-0 flex items-center justify-center text-white font-bold opacity-0 group-hover:opacity-100 transition-opacity z-20">
+                    {skill.level}%
                   </span>
                 </div>
               ))}
@@ -157,7 +230,7 @@ function Skills() {
         <polygon
           points="50,15 61,35 85,35 66,50 71,75 50,60 29,75 34,50 15,35 39,35"
           stroke="black"
-          stroke-width="3"
+          strokeWidth="3"
           fill="white"
         />
       </svg>

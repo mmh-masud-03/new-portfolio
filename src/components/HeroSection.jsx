@@ -1,21 +1,33 @@
 "use client";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaMedium,
-  FaTelegram,
-  FaWhatsapp,
-  FaTwitter,
-  FaMediumM,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaMedium, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 import CountUp from "./CountUpComponent";
 import MouseAnimation from "./MouseAnimation";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 function HeroSection() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        setIsVisible(false);
+      }
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <section
       id="about"
@@ -32,11 +44,10 @@ function HeroSection() {
       <span className="bg-pulse absolute bottom-[1%] right-[10%] lg:right-[20%] animate-pulsebg pulse-delay-2"></span>
       <span className="bg-pulse absolute bottom-[24%] lg:bottom-[2%] left-[2%]  animate-pulsebg pulse-delay-4"></span>
       <span
-        className="bg-pulse absolute -bottom-[1%] right-[45%] animate-pulsebg pulse-delay-1"
+        className="bg-pulse absolute -bottom-[1%] right-[40%] animate-pulsebg pulse-delay-1"
         style={{ background: "transparent", border: "5px solid #fff" }}
       ></span>
       <span className="bg-pulse absolute top-[14%] right-[30%]  animate-pulsebg pulse-delay-5"></span>
-
       <svg
         viewBox="0 0 200 200"
         xmlns="http://www.w3.org/2000/svg"
@@ -179,6 +190,7 @@ function HeroSection() {
           </div>
         </div>
       </motion.div>
+      <MouseAnimation isVisible={isVisible} />{" "}
     </section>
   );
 }
