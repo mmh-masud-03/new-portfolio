@@ -35,6 +35,7 @@ const roboto = Roboto({
 export const metadata = {
   title: "Masud Portfolio",
   description: "Portfolio of Masud Hossen",
+  
 };
 
 export default function RootLayout({ children }) {

@@ -54,7 +54,7 @@ function Header() {
               alt="Logo"
               width={40}
               height={40}
-              className="rounded-full animate-pulse"
+              className="rounded animate-pulse"
             />
           </motion.div>
         </Link>

@@ -7,6 +7,7 @@ import CountUp from "./CountUpComponent";
 import MouseAnimation from "./MouseAnimation";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import TypeAnim from "./TypeAnim";
 
 function HeroSection() {
   const [isVisible, setIsVisible] = useState(true);
@@ -70,41 +71,15 @@ function HeroSection() {
           transform="translate(100 100)"
         />
       </svg>
-      <motion.div className="px-4 lg:px-8 flex flex-col-reverse gap-6 lg:gap-x-12 lg:pt-24 pt-10 lg:flex-row z-50">
+      <motion.div className="px-4 lg:px-8 flex flex-col-reverse gap-6 lg:gap-x-12 lg:pt-[5.3rem] pt-10 lg:flex-row z-50">
         <div className="flex flex-col gap-y-5 justify-between items-center w-full lg:w-1/2">
-          <p className="text-white/75 text-xl lg:text-4xl font-bold font-montserrat">
+          <p className="text-white/75 text-xl lg:text-4xl font-bold font-montserrat mb-2">
             Hello, I am{" "}
             <span className="font-montserrat text-yellow-500 hover:animate-pulse z-10">
               MASUD
             </span>
           </p>
-          <div>
-            <TypeAnimation
-              sequence={[
-                "I am a ReactJS Developer",
-                1000,
-                "I am a NextJS Developer",
-                1000,
-                "I am a MERN Stack Developer",
-                1000,
-                "I am an IOT Developer",
-                1000,
-              ]}
-              speed={260}
-              deletionSpeed={180}
-              preRenderFirstString={true}
-              className="font-semibold font-montserrat text-white/85 w-full text-md lg:text-3xl transform -translate-y-1/2 -translate-x-1/2 bg-transparent"
-              repeat={Infinity}
-              style={{
-                textShadow:
-                  "0 0 10px 0 #8093F1, 0 0 20px 0 #8093F1, 0 0 40px 0 #8093F1, 0 0 60px 0 #8093F1",
-                WebkitBoxReflect:
-                  "below 0px linear-gradient(transparent, #0005)",
-                backgroundClip: "text",
-                zIndex: 10,
-              }}
-            />
-          </div>
+          <TypeAnim />
           <p className="text-white/90 text-base lg:text-lg tracking-wide font-opensans mx-auto text-justify">
             A self-taught full-stack developer specializing in{" "}
             <span className="font-firacode text-yellow-300/90 font-semibold">
