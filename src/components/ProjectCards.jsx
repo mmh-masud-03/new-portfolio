@@ -153,7 +153,7 @@ function ProjectCards() {
                       Technologies:
                     </span>
                     {data.tech.map((tech, i) => (
-                      <div key={i} className="text-white">
+                      <div key={i} className="text-white font-firacode">
                         {tech},
                       </div>
                     ))}
