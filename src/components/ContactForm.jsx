@@ -61,7 +61,7 @@ export const ContactUs = () => {
   return (
     <section
       id="contact"
-      className="container bg-black text-white/95 p-8 max-w-2xl mx-auto pt-20"
+      className="container bg-black text-white/95 p-8 max-w-2xl mx-auto pt-20  w-full"
     >
       <h1 className="text-4xl font-bold mb-8">
         <span className="font-montserrat text-yellow-300/95">Get In Touch</span>

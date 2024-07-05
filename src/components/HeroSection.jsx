@@ -32,7 +32,7 @@ function HeroSection() {
   return (
     <section
       id="about"
-      className="container mx-auto hero-dots-container min-h-[80vh] lg:min-h-[95vh] w-full mb-5 overflow-hidden"
+      className="container mx-auto hero-dots-container min-h-[80vh] lg:min-h-[95vh] xl:min-h-[55vh] w-full mb-5 overflow-hidden"
     >
       <span
         className="bg-pulse absolute top-[15%] left-[5%] animate-pulsebg pulse-delay-1"

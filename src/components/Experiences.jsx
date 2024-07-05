@@ -92,7 +92,7 @@ function Experiences() {
     <section
       ref={sectionRef}
       id="experiences"
-      className="container mx-auto py-24 relative overflow-hidden"
+      className="container mx-auto py-24 relative overflow-hidden xl:bg-gray-950"
     >
       <motion.div
         initial="hidden"
