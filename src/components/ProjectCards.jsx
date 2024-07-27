@@ -12,6 +12,25 @@ import { motion } from "framer-motion";
 
 const portfolioData = [
   {
+    title: "FinTrack",
+    type: "Personal Finance Management",
+    description:
+      "FinTrack is a Next.js-based finance management app that helps users manage budgets, track expenses, record income, and set savings goals. Featuring a real-time dashboard and detailed reports, it provides a seamless experience for maintaining and improving financial health.",
+    image: "/assets/images/fintrack.png",
+    url: "https://fintrack-nu.vercel.app",
+    github: "https://github.com/mmh-masud-03/expense-tracker",
+    tech: [
+      "NextJS",
+      "Next-auth",
+      "Mongoose",
+      "JWT",
+      "Tailwind",
+      "Chart.js",
+      "SWR",
+      "Framer Motion",
+    ],
+  },
+  {
     title: "Gadget Hub",
     type: "Ecommerce",
     description:

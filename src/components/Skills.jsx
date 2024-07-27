@@ -63,7 +63,7 @@ function Skills() {
     if (!hasVisited && isInViewport) {
       setShowOverlay(true);
       localStorage.setItem("hasVisitedSkills", "true");
-      const timer = setTimeout(() => setShowOverlay(false), 3500);
+      const timer = setTimeout(() => setShowOverlay(false), 4500);
       return () => clearTimeout(timer);
     }
   }, [isInViewport]);
@@ -220,7 +220,7 @@ function Skills() {
         alt=""
         width={400}
         height={400}
-        className="absolute top-[50%] -left-[160px] bg-transparent opacity-[0.1] animate-bulbpulse"
+        className="absolute top-[27%] -left-[160px] bg-transparent opacity-[0.4] animate-bulbpulse"
       />
       <svg
         width="100"
