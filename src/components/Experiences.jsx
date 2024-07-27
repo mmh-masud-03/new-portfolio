@@ -211,7 +211,7 @@ function Experiences() {
         <motion.div variants={itemVariants} className="mt-16">
           <button
             onClick={() => setIsTimelineOpen(!isTimelineOpen)}
-            className="font-raleway bg-white text-indigo-600 px-6 py-3 rounded-full font-bold hover:bg-indigo-100 transition-colors duration-300"
+            className="font-raleway bg-yellow-300/90 text-black px-6 py-3 rounded font-bold hover:bg-yellow-400 transition-colors duration-300"
           >
             {isTimelineOpen ? "Hide" : "Show"} Career Timeline
           </button>
