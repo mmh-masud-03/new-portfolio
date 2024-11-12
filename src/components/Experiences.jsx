@@ -10,6 +10,17 @@ import {
 export const experiences = [
   {
     id: 1,
+    title: "Software Engineer (TAO)",
+    company: "First Security Islami Bank PLC",
+    duration: "August 2024 - Present",
+    description: [
+      "Contributed to a chatbot application frontend using HTML, CSS, and JavaScript, enhancing web development skills. Implemented a user-friendly interface, improving user experience by 30%.",
+      "Developed the FSIB Yellow Pages mobile application using Flutter, ensuring cross-platform compatibility and optimal performance. Integrated APIs for real-time data synchronization.",
+      "Learned about backend development using Nest.js, enhancing knowledge of RESTful APIs and database management with Mongoose. Implemented user authentication, authorization and role based access control, ensuring data security and privacy.",
+    ],
+  },
+  {
+    id: 2,
     title: "Frontend Developer Intern",
     company: "Kutir IT",
     duration: "January 2024 - April 2024",
@@ -20,7 +31,7 @@ export const experiences = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Full Stack Developer Intern",
     company: "A.I.T GreeNEX",
     duration: "November 2022 - January 2023",
@@ -49,15 +60,17 @@ function Experiences() {
       selectedExperience.description
         .join(" ")
         .match(
-          /\b(React|Next\.js|Tailwind CSS|Redux Toolkit|JavaScript|HTML|CSS|FastAPI)\b/g
+          /\b(React|Flutter|Nest\.js|Next\.js|Tailwind CSS|Redux Toolkit|JavaScript|HTML|CSS|FastAPI)\b/g
         ) || [];
     setActiveSkills([...new Set(skillsUsed)]);
   }, [selectedExperience]);
 
   const allSkills = [
+    "Flutter",
     "React",
     "Redux Toolkit",
     "Next.js",
+    "Nest.js",
     "Tailwind CSS",
     "JavaScript",
     "HTML",

@@ -78,6 +78,11 @@ function Skills() {
           level: 90,
         },
         {
+          name: "Dart",
+          src: "/assets/images/tools/dart.svg",
+          level: 60,
+        },
+        {
           name: "Typescript",
           src: "/assets/images/tools/typescript.svg",
           level: 85,
@@ -94,11 +99,16 @@ function Skills() {
           src: "/assets/images/tools/nextjs.png",
           level: 96,
         },
+        {
+          name: "Flutter",
+          src: "/assets/images/tools/flutter.svg",
+          level: 70,
+        },
         { name: "React", src: "/assets/images/tools/react.svg", level: 90 },
         {
           name: "Bootstrap",
           src: "/assets/images/tools/bootstrap.svg",
-          level: 70,
+          level: 75,
         },
         {
           name: "Tailwind CSS",
@@ -113,6 +123,8 @@ function Skills() {
     {
       category: "Backend Technologies",
       skills: [
+        { name: "Nest.js", src: "/assets/images/tools/nestjs.svg", level: 70 },
+
         { name: "Express", src: "/assets/images/tools/express.svg", level: 70 },
         { name: "Node", src: "/assets/images/tools/node.svg", level: 60 },
         {
