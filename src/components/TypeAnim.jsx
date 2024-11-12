@@ -9,9 +9,9 @@ function TypeAnim() {
         sequence={[
           "I am a NextJS Developer",
           1000,
-          "I am a ReactJS Developer",
+          "I am a NestJS Developer",
           1000,
-          "I am a MERN Stack Developer",
+          "I am a Flutter Developer",
           1000,
           "I am an IOT Developer",
           1000,

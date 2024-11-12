@@ -84,7 +84,7 @@ function HeroSection() {
             A self-taught full-stack developer specializing in{" "}
             <span className="font-firacode text-yellow-300/90 font-semibold">
               {" "}
-              Next.js, React.js, Tailwind CSS
+              Flutter, Next.js, Nest.js, Tailwind CSS
             </span>
             , and modern web technologies. I excel in building high-performance,
             server-rendered React apps and dynamic UIs, with a focus on
@@ -92,7 +92,7 @@ function HeroSection() {
             <span className="text-yellow-300/90 font-semibold">SEO</span>. With
             experience in{" "}
             <span className="font-firacode text-yellow-300/90 font-semibold">
-              Next.js, Node.js, Express, and MongoDB
+              Next.js, Nest.js, Express, and MongoDB
             </span>
             , I deliver complete full-stack solutions. I'm passionate about
             staying updated with industry trends.
