@@ -156,7 +156,7 @@ function HeroSection() {
         <div className="pt-10 pl-12 z-10">
           <div className="animate-circlepulse w-[60%] h-[60%] md:bg-contain md:h-auto lg:w-[300px] lg:h-[300px] border rounded-full border-fuchsia-800/50 ">
             <Image
-              src={"/assets/images/hero pic.jpg"}
+              src={"/assets/images/hero new.jpg"}
               alt=""
               height={300}
               width={300}
