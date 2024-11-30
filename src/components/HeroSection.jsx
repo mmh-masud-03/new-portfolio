@@ -130,7 +130,7 @@ function HeroSection() {
           </div>
           <div className="flex flex-row justify-center gap-x-6 pb-5">
             <a
-              href="/assets/Masud-Hossen-Resume.pdf"
+              href="/assets/Masud Hossen.pdf"
               download={true}
               className="text-center font-raleway text-base lg:text-lg relative inline-block bg-yellow-300/90 text-black font-bold py-2 px-4 rounded hover:bg-yellow-400 transition duration-300 overflow-hidden"
             >
