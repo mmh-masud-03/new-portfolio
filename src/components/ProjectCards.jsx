@@ -31,6 +31,16 @@ const portfolioData = [
     ],
   },
   {
+    title: "Attire Avenue",
+    type: "A Modern Clothing Store",
+    description:
+      "Attire Avenue(clone of Fabrilife.com) is an e-commerce application frontend (completely responsive) which contains a variety of clothing items. Users can browse through the collection, add items to their cart, and proceed to checkout. The app also features a search function and a filter for sorting products.",
+    image: "/assets/images/attireavenue.png",
+    url: "https://attire-avenue-shop.vercel.app/",
+    github: "",
+    tech: ["NextJS", "Tailwind"],
+  },
+  {
     title: "Gadget Hub",
     type: "Ecommerce",
     description:
@@ -189,15 +199,17 @@ function ProjectCards() {
                         </span>
                       </Link>
                     )}
-                    <Link
-                      href={data.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className="bg-black text-white px-4 py-2 rounded shadow hover:bg-gray-900 transition flex items-center gap-2">
-                        <FaGithub size={32} />
-                      </span>
-                    </Link>
+                    {data.github.length > 5 && (
+                      <Link
+                        href={data.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span className="bg-black text-white px-4 py-2 rounded shadow hover:bg-gray-900 transition flex items-center gap-2">
+                          <FaGithub size={32} />
+                        </span>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </motion.div>
