@@ -41,6 +41,17 @@ const portfolioData = [
     tech: ["NextJS", "Tailwind"],
   },
   {
+    title: "Flutter Essentials",
+    type: "Flutter App",
+    description:
+      "Flutter Essentials is a mobile app that provides a comprehensive guide to Flutter, including widgets, layouts, and state management. It also covers advanced topics like animations, gestures, and custom painting. The app is designed to help developers learn Flutter and build beautiful, high-performance apps.",
+    image: "/assets/images/flutter essentials.png",
+    url: "",
+    github: "https://github.com/mmh-masud-03/flutter_essentials",
+    tech: ["Flutter", "Dart", "Riverpod", "Http", "SQFlite", "Highlight"],
+  },
+
+  {
     title: "Gadget Hub",
     type: "Ecommerce",
     description:
